@@ -76,3 +76,4 @@ This script will:
 - Install the latest version of `minikube`.
 
 After running the script, log out and log back in to apply the Docker group membership changes.
+<img width="623" alt="image" src="https://github.com/sameer358/Devops-automation/assets/24916603/b0f2aeff-c371-471c-9fd9-79a800174ae2">
