@@ -77,3 +77,5 @@ This script will:
 
 After running the script, log out and log back in to apply the Docker group membership changes.
 <img width="623" alt="image" src="https://github.com/sameer358/Devops-automation/assets/24916603/b0f2aeff-c371-471c-9fd9-79a800174ae2">
+<img width="521" alt="image" src="https://github.com/sameer358/Devops-automation/assets/24916603/87d32e4a-b32f-47fc-b785-aa5ad63f5b49">
+
