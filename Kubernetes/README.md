@@ -1,160 +1,231 @@
-### Building a Kubernetes 1.27 Cluster with kubeadm
+# Mastering Kubernetes: From Introduction to Deploying NGINX
 
-**Introduction**
+Kubernetes is a powerful tool that helps manage and run applications in containers. It makes tasks like deploying, scaling, and maintaining apps much easier. This guide will help you learn the basics of Kubernetes, set it up in Docker Desktop, use `kubectl`, and deploy NGINX.
 
-Building a Kubernetes cluster is a vital skill for managing containerized applications. This guide will walk you through the process of setting up a Kubernetes 1.27 cluster using `kubeadm` with one control plane node and two worker nodes. The cluster will use `containerd` as the container runtime and the Calico network add-on for networking.
+## What is Kubernetes?
 
-**Prerequisites**
+Kubernetes is a free, open-source system that helps automate the management of applications in containers. It simplifies the deployment and operation of applications by handling the underlying infrastructure for you. Here’s a quick look at its main features:
 
-- Three Linux servers
-- Basic understanding of SSH and Linux command line
-- Access to the internet from the servers
+### Key Concepts
 
-**Step 1: Initial Setup**
+1. **Pod**:
+   - **What It Is**: The smallest unit in Kubernetes. A Pod can hold one or more containers that share the same network and storage.
+   - **What It Does**: Runs single instances of applications or services, keeping them consistent and separate from others.
 
-**Log in to the servers:**
+2. **Deployment**:
+   - **What It Is**: Manages how Pods are deployed and scaled. It ensures that the right number of Pods are running and helps with updates.
+   - **What It Does**: Automates creating, updating, and scaling Pods, making sure your app is always available.
 
-Log in to each of the servers using SSH.
+3. **Service**:
+   - **What It Is**: Defines a way to access a set of Pods and provides a stable network address.
+   - **What It Does**: Helps with load balancing and finding services, ensuring reliable communication between app parts.
 
-```sh
-ssh cloud_user@<PUBLIC_IP_ADDRESS>
+4. **ReplicaSet**:
+   - **What It Is**: Ensures a specified number of Pod copies are running. Usually managed by Deployments.
+   - **What It Does**: Keeps your app reliable and scalable by maintaining the right number of Pod copies.
+
+5. **Namespace**:
+   - **What It Is**: Divides cluster resources into virtual clusters to organize and control access.
+   - **What It Does**: Useful for separating environments like development and production, or for managing different projects.
+
+## Setting Up Kubernetes in Docker Desktop
+
+Docker Desktop includes a built-in Kubernetes cluster for local development. Here’s how to set it up:
+
+1. **Open Docker Desktop**:
+   - Start Docker Desktop from your applications menu.
+
+2. **Go to Settings**:
+   - Click the gear icon (⚙️) in the top-right corner.
+
+3. **Select the Kubernetes Tab**:
+   - Choose the "Kubernetes" tab from the sidebar.
+
+4. **Enable Kubernetes**:
+   - Check "Enable Kubernetes".
+
+5. **Apply & Restart**:
+   - Click "Apply & Restart" to start Kubernetes. Docker Desktop will restart to configure it.
+
+6. **Wait for Setup**:
+   - It might take a few minutes for Kubernetes to start. Docker Desktop will show the setup status.
+
+## What is `kubectl`?
+
+`kubectl` is a command-line tool for managing Kubernetes clusters. It lets you interact with your Kubernetes resources.
+
+### Key Features of `kubectl`:
+
+- **Run Commands**: Manage resources like Pods, Services, and Deployments.
+- **Change Configurations**: Apply changes to create or update resources.
+- **Check Status**: View and debug the state of resources in the cluster.
+
+### Common `kubectl` Commands:
+
+- **Get Resources**:
+  ```bash
+  kubectl get [resource]
+  ```
+  - Lists resources like Pods, Services, or Deployments.
+
+- **Describe Resource**:
+  ```bash
+  kubectl describe [resource] [name]
+  ```
+  - Shows detailed info about a specific resource.
+
+- **Apply Configuration**:
+  ```bash
+  kubectl apply -f [file.yaml]
+  ```
+  - Applies changes from a YAML file.
+
+- **Delete Resource**:
+  ```bash
+  kubectl delete -f [file.yaml]
+  ```
+  - Deletes resources from the cluster.
+
+## Checking Versions
+
+### Check `kubectl` Version
+
+To find out which version of `kubectl` you have:
+
+```bash
+kubectl version --client
 ```
 
-**Install necessary packages:**
+```bash
+kubectl version
+```
 
-Log in to the control plane node first, and then repeat these steps on all nodes.
+- This shows both the client and server versions of Kubernetes.
 
-1. **Create configuration file for containerd:**
+## Deploying NGINX Instances
 
-    ```sh
-    cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
-    overlay
-    br_netfilter
-    EOF
-    ```
+To deploy multiple NGINX instances, follow these steps:
 
-2. **Load the necessary modules:**
+### Step 1: Create a Deployment
 
-    ```sh
-    sudo modprobe overlay
-    sudo modprobe br_netfilter
-    ```
+1. **Open Terminal**:
+   - Use your terminal or command prompt.
 
-3. **Set system configurations for Kubernetes networking:**
+2. **Create Deployment YAML File**:
+   - Save the following to `nginx-deployment.yaml`:
 
-    ```sh
-    cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
-    net.bridge.bridge-nf-call-iptables = 1
-    net.ipv4.ip_forward = 1
-    net.bridge.bridge-nf-call-ip6tables = 1
-    EOF
-    sudo sysctl --system
-    ```
+   ```yaml
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: nginx-deployment
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: nginx
+     template:
+       metadata:
+         labels:
+           app: nginx
+       spec:
+         containers:
+         - name: nginx
+           image: nginx:latest
+           ports:
+           - containerPort: 80
+   ```
 
-4. **Install containerd:**
+   - **What It Does**: Defines a Deployment with 3 replicas of NGINX.
 
-    ```sh
-    sudo apt-get update && sudo apt-get install -y containerd.io
-    ```
+3. **Apply the Deployment**:
+   - Run:
 
-5. **Create the default configuration file for containerd:**
+   ```bash
+   kubectl apply -f nginx-deployment.yaml
+   ```
 
-    ```sh
-    sudo mkdir -p /etc/containerd
-    sudo containerd config default | sudo tee /etc/containerd/config.toml
-    sudo systemctl restart containerd
-    sudo systemctl status containerd
-    ```
+### Step 2: Expose the Deployment
 
-6. **Disable swap:**
+1. **Create Service YAML File**:
+   - Save the following to `nginx-service.yaml`:
 
-    ```sh
-    sudo swapoff -a
-    ```
+   ```yaml
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: nginx-service
+   spec:
+     selector:
+       app: nginx
+     ports:
+       - protocol: TCP
+         port: 80
+         targetPort: 80
+     type: LoadBalancer
+   ```
 
-7. **Install dependency packages:**
+   - **What It Does**: Creates a Service to expose the NGINX Deployment.
 
-    ```sh
-    sudo apt-get update && sudo apt-get install -y apt-transport-https curl
-    ```
+2. **Apply the Service**:
+   - Run:
 
-8. **Download and add the GPG key:**
+   ```bash
+   kubectl apply -f nginx-service.yaml
+   ```
 
-    ```sh
-    curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.27/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-    ```
+3. **Access NGINX in Browser**:
+   - Open:
 
-9. **Add Kubernetes to the repository list:**
+   ```bash
+   http://127.0.0.1/
+   ```
 
-    ```sh
-    cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
-    deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.27/deb/ /
-    EOF
-    sudo apt-get update
-    ```
+### Step 3: Check the Status
 
-10. **Install Kubernetes packages:**
+1. **List Pods**:
+   - Check Pods:
 
-    ```sh
-    sudo apt-get install -y kubelet kubeadm kubectl
-    sudo apt-mark hold kubelet kubeadm kubectl
-    ```
+   ```bash
+   kubectl get pods
+   ```
 
-Repeat the above steps for all worker nodes.
+2. **Check Deployment**:
+   - Verify Deployment:
 
-**Step 2: Initialize the Cluster**
+   ```bash
+   kubectl get deployments
+   ```
 
-1. **Initialize the Kubernetes cluster on the control plane node:**
+3. **Check Service**:
+   - View Service status:
 
-    ```sh
-    sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.27.11
-    ```
+   ```bash
+   kubectl get services
+   ```
 
-2. **Set up kubectl for the control plane node:**
+   - **Note**: Docker Desktop has a Kubernetes dashboard for a visual view of your resources.
 
-    ```sh
-    mkdir -p $HOME/.kube
-    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-    sudo chown $(id -u):$(id -g) $HOME/.kube/config
-    ```
+### Step 4: Clean Up
 
-3. **Test access to the cluster:**
+1. **Delete the Service**:
 
-    ```sh
-    kubectl get nodes
-    ```
+   ```bash
+   kubectl delete -f nginx-service.yaml
+   ```
 
-**Step 3: Install the Calico Network Add-On**
+2. **Delete the Deployment**:
 
-1. **Install Calico Networking on the control plane node:**
+   ```bash
+   kubectl delete -f nginx-deployment.yaml
+   ```
 
-    ```sh
-    kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
-    ```
+3. **Verify Deletion**:
+   - Ensure Pods and Services are removed:
 
-2. **Check the status of the control plane node:**
+   ```bash
+   kubectl get pods
+   kubectl get services
+   ```
 
-    ```sh
-    kubectl get nodes
-    ```
-
-**Step 4: Join the Worker Nodes to the Cluster**
-
-1. **Create the join command token on the control plane node:**
-
-    ```sh
-    kubeadm token create --print-join-command
-    ```
-
-2. **Copy the output from the previous command and run it on each worker node:**
-
-    ```sh
-    sudo kubeadm join <control-plane-ip>:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
-    ```
-
-3. **Verify the nodes have joined the cluster:**
-
-    ```sh
-    kubectl get nodes
-    ```
-
+---
