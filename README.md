@@ -1,165 +1,59 @@
+# DevOps Automation Knowledge Hub
+
+Welcome to the **DevOps Automation Knowledge Hub**! This repository is designed to share comprehensive DevOps knowledge, tools, and automation techniques. Whether you're new to DevOps or looking to enhance your expertise, this collection covers everything you need to build, deploy, and manage applications efficiently.
+
+## What's Inside
+
+This repository includes a complete solution for DevOps automation, covering:
+
+### 1. Docker
+- Containerization techniques.
+- Dockerfile best practices.
+- Docker Compose for multi-container applications.
+
+### 2. Kubernetes
+- Managing containerized applications in Kubernetes clusters.
+- Helm charts for Kubernetes deployments.
+- Kubernetes service discovery and networking.
+
+### 3. Jenkins
+- Automating CI/CD pipelines with Jenkins.
+- Setting up Jenkins pipelines using declarative syntax.
+- Integrating Jenkins with version control systems (e.g., Git).
+
+### 4. SonarQube
+- Implementing continuous inspection of code quality.
+- Integrating SonarQube with Jenkins and other CI/CD tools.
+- Customizing quality gates and code analysis rules.
+
+### 5. CI/CD Tools
+- Full CI/CD pipeline examples.
+- Integrating testing, building, and deployment stages.
+- Using GitLab CI, Jenkins, and other CI/CD tools to automate delivery pipelines.
+
+### 6. Shell Scripts
+- Handy scripts to automate routine tasks.
+- Deployment automation and server management.
+- System monitoring and health checks.
+
+### 7. Ansible
+- Automating infrastructure management and provisioning.
+- Writing Ansible playbooks for configuration management.
+- Dynamic inventory and role-based automation solutions.
+
+## How to Use This Repository
+
+Each section contains detailed documentation, example scripts, and configurations for real-world DevOps environments. Start with any section to get familiar with the tool, or combine them to implement a complete DevOps automation workflow.
+
+## Contributions
+
+Feel free to contribute by adding new tools, enhancing existing scripts, or sharing your knowledge to help others in the DevOps community.
+
+## License
+
+This repository is open-sourced under the [MIT License](LICENSE).
 
 ---
 
-### **Docker Command Cheat Sheet**
-
-#### **Basic Commands**
-
-- **Check Docker Version**
-  ```bash
-  docker --version
-  ```
-
-- **List Docker Images**
-  ```bash
-  docker images
-  ```
-
-- **List Running Containers**
-  ```bash
-  docker ps
-  ```
-
-- **List All Containers (including stopped)**
-  ```bash
-  docker ps -a
-  ```
-
-- **Run a Container**
-  ```bash
-  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
-  ```
-
-- **Stop a Running Container**
-  ```bash
-  docker stop CONTAINER_ID
-  ```
-
-- **Remove a Container**
-  ```bash
-  docker rm CONTAINER_ID
-  ```
-
-- **Remove an Image**
-  ```bash
-  docker rmi IMAGE_ID
-  ```
-
-#### **Building Docker Images**
-
-- **Build an Image from a Dockerfile**
-  ```bash
-  docker build -t IMAGE_NAME:TAG PATH
-  ```
-
-- **Build an Image from a Dockerfile (No Cache)**
-  ```bash
-  docker build --no-cache -t IMAGE_NAME:TAG PATH
-  ```
-
-- **View Build History**
-  ```bash
-  docker history IMAGE_NAME:TAG
-  ```
-
-#### **Dockerfile Basics**
-
-- **Basic Dockerfile Structure**
-  ```Dockerfile
-  # Use a base image
-  FROM ubuntu:latest
-
-  # Set environment variables
-  ENV VAR_NAME=value
-
-  # Install dependencies
-  RUN apt-get update && apt-get install -y package
-
-  # Add files to the image
-  COPY local_path /container_path
-
-  # Set the working directory
-  WORKDIR /container_path
-
-  # Define the command to run
-  CMD ["executable", "param1", "param2"]
-  ```
-
-#### **Networking and Volumes**
-
-- **Create a Network**
-  ```bash
-  docker network create NETWORK_NAME
-  ```
-
-- **Run a Container with a Network**
-  ```bash
-  docker run --network NETWORK_NAME IMAGE_NAME
-  ```
-
-- **Create a Volume**
-  ```bash
-  docker volume create VOLUME_NAME
-  ```
-
-- **Run a Container with a Volume**
-  ```bash
-  docker run -v VOLUME_NAME:/container_path IMAGE_NAME
-  ```
-
-#### **Docker Compose**
-
-- **Start Services**
-  ```bash
-  docker-compose up
-  ```
-
-- **Start Services in Detached Mode**
-  ```bash
-  docker-compose up -d
-  ```
-
-- **Stop Services**
-  ```bash
-  docker-compose down
-  ```
-
-- **Build Services**
-  ```bash
-  docker-compose build
-  ```
-
-- **View Logs**
-  ```bash
-  docker-compose logs
-  ```
-
-#### **Pipeline Commands**
-
-- **Push Image to Registry**
-  ```bash
-  docker push IMAGE_NAME:TAG
-  ```
-
-- **Pull Image from Registry**
-  ```bash
-  docker pull IMAGE_NAME:TAG
-  ```
-
-- **Tag an Image**
-  ```bash
-  docker tag SOURCE_IMAGE:TAG TARGET_IMAGE:TAG
-  ```
-
-- **Login to Docker Hub**
-  ```bash
-  docker login
-  ```
-
-- **Logout from Docker Hub**
-  ```bash
-  docker logout
-  ```
-
----
+Happy automating!
 
