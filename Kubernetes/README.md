@@ -85,6 +85,14 @@ Docker Desktop includes a built-in Kubernetes cluster for local development. Her
   kubectl delete -f [file.yaml]
   ```
   - Deletes resources from the cluster.
+-**If you want to delete all the pods in a namespace, use:**
+```bash
+kubectl delete pods --all
+```
+-**To delete all services in the current namespace, use:**
+```bash
+kubectl delete services --all
+```
 
 ## Checking Versions
 
