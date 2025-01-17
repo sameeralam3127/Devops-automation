@@ -1,57 +1,26 @@
-# DevOps Automation Knowledge Hub
+# Welcome to Compute Central
 
-Welcome to the **DevOps Automation Knowledge Hub**! This repository is designed to share comprehensive DevOps knowledge, tools, and automation techniques. Whether you're new to DevOps or looking to enhance your expertise, this collection covers everything you need to build, deploy, and manage applications efficiently.
+Welcome to **Compute Central**, your go-to destination for DevOps and SRE tools, tips, tricks, and community-driven forums! 
 
-This repository includes a complete solution for DevOps automation, covering:
+Since 2016, we have been committed to sharing valuable insights, tutorials, and resources to help developers and operations teams improve their workflow, enhance system reliability, and stay up to date with the latest trends in the tech world.
 
-### 1. Docker
-- Containerization techniques.
-- Dockerfile best practices.
-- Docker Compose for multi-container applications.
+## What You Will Find Here
 
-### 2. Kubernetes
-- Managing containerized applications in Kubernetes clusters.
-- Helm charts for Kubernetes deployments.
-- Kubernetes service discovery and networking.
+- **DevOps Tips and Best Practices**: Learn about the latest tools and techniques to streamline your DevOps pipelines and optimize your CI/CD workflows.
+- **SRE Tools**: Discover tools and methods for Site Reliability Engineering (SRE), and how to implement them to improve service reliability.
+- **Tutorials and Guides**: Step-by-step tutorials to help you set up and use various DevOps and SRE tools.
+- **Community Forums**: Engage with the community and share your thoughts on best practices, challenges, and new tools.
 
-### 3. Jenkins
-- Automating CI/CD pipelines with Jenkins.
-- Setting up Jenkins pipelines using declarative syntax.
-- Integrating Jenkins with version control systems (e.g., Git).
+## About Me
 
-### 4. SonarQube
-- Implementing continuous inspection of code quality.
-- Integrating SonarQube with Jenkins and other CI/CD tools.
-- Customizing quality gates and code analysis rules.
+I am Sameer Alam, a passionate DevOps engineer and site reliability advocate. I have spent years exploring various tools and strategies for better system management, and I now share my experiences and insights on this blog. You can explore my work and contributions on GitHub:
 
-### 5. CI/CD Tools
-- Full CI/CD pipeline examples.
-- Integrating testing, building, and deployment stages.
-- Using GitLab CI, Jenkins, and other CI/CD tools to automate delivery pipelines.
+[My GitHub Profile](https://github.com/sameeralam3127)
 
-### 6. Shell Scripts
-- Handy scripts to automate routine tasks.
-- Deployment automation and server management.
-- System monitoring and health checks.
+## Blog Archive
 
-### 7. Ansible
-- Automating infrastructure management and provisioning.
-- Writing Ansible playbooks for configuration management.
-- Dynamic inventory and role-based automation solutions.
+Explore the articles from my old Blogger blog, which was started in 2016. You can still access the older content here:
 
-## How to Use This Repository
+[Old Blog Archive](https://compute-central.blogspot.com/)
 
-Each section contains detailed documentation, example scripts, and configurations for real-world DevOps environments. Start with any section to get familiar with the tool, or combine them to implement a complete DevOps automation workflow.
-
-## Contributions
-
-Feel free to contribute by adding new tools, enhancing existing scripts, or sharing your knowledge to help others in the DevOps community.
-
-## License
-
-This repository is open-sourced under the [MIT License](LICENSE).
-
----
-
-Happy automating!
-
+Feel free to explore and get in touch if you have any questions or feedback. Happy learning!

@@ -10,26 +10,28 @@
         <meta name="author" content="Sameer Alam">
       
       
-        <link rel="canonical" href="https://www.computecentral.in/">
+        <link rel="canonical" href="https://www.computecentral.in/kubernetes/kubernetes/">
       
       
+        <link rel="prev" href="../../docker/docker/">
       
-        <link rel="next" href="docker/docker/">
+      
+        <link rel="next" href="../../jenkins/jenkins/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Compute Central</title>
+        <title>Managing containerized applications in Kubernetes clusters - Compute Central</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -87,7 +89,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Compute Central" class="md-header__button md-logo" aria-label="Compute Central" data-md-component="logo">
+    <a href="../.." title="Compute Central" class="md-header__button md-logo" aria-label="Compute Central" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Managing containerized applications in Kubernetes clusters
             
           </span>
         </div>
@@ -211,11 +213,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -234,7 +234,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="docker/docker/" class="md-tabs__link">
+        <a href="../../docker/docker/" class="md-tabs__link">
           
   
     
@@ -250,11 +250,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="kubernetes/kubernetes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -274,7 +276,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="jenkins/jenkins/" class="md-tabs__link">
+        <a href="../../jenkins/jenkins/" class="md-tabs__link">
           
   
     
@@ -294,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="sonarqube/code-quality/" class="md-tabs__link">
+        <a href="../../sonarqube/code-quality/" class="md-tabs__link">
           
   
     
@@ -314,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="cicd-tools/pipeline-examples/" class="md-tabs__link">
+        <a href="../../cicd-tools/pipeline-examples/" class="md-tabs__link">
           
   
     
@@ -334,7 +336,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="shell-scripts/handy-scripts/" class="md-tabs__link">
+        <a href="../../shell-scripts/handy-scripts/" class="md-tabs__link">
           
   
     
@@ -354,7 +356,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="ansible/ansible/" class="md-tabs__link">
+        <a href="../../ansible/ansible/" class="md-tabs__link">
           
   
     
@@ -395,7 +397,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Compute Central" class="md-nav__button md-logo" aria-label="Compute Central" data-md-component="logo">
+    <a href="../.." title="Compute Central" class="md-nav__button md-logo" aria-label="Compute Central" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -410,17 +412,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,7 +424,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -487,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/docker/" class="md-nav__link">
+      <a href="../../docker/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,8 +506,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -522,21 +518,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
-        
-          
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -547,7 +544,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -558,10 +555,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="kubernetes/kubernetes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -570,6 +574,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -635,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="jenkins/jenkins/" class="md-nav__link">
+      <a href="../../jenkins/jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sonarqube/code-quality/" class="md-nav__link">
+      <a href="../../sonarqube/code-quality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -783,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="cicd-tools/pipeline-examples/" class="md-nav__link">
+      <a href="../../cicd-tools/pipeline-examples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="shell-scripts/handy-scripts/" class="md-nav__link">
+      <a href="../../shell-scripts/handy-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ansible/ansible/" class="md-nav__link">
+      <a href="../../ansible/ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -983,23 +988,255 @@
                   
 
 
-<h1 id="welcome-to-compute-central">Welcome to Compute Central</h1>
-<p>Welcome to <strong>Compute Central</strong>, your go-to destination for DevOps and SRE tools, tips, tricks, and community-driven forums! </p>
-<p>Since 2016, we have been committed to sharing valuable insights, tutorials, and resources to help developers and operations teams improve their workflow, enhance system reliability, and stay up to date with the latest trends in the tech world.</p>
-<h2 id="what-you-will-find-here">What You Will Find Here</h2>
+<h1 id="mastering-kubernetes-from-introduction-to-deploying-nginx">Mastering Kubernetes: From Introduction to Deploying NGINX</h1>
+<p>Kubernetes is a powerful tool that helps manage and run applications in containers. It makes tasks like deploying, scaling, and maintaining apps much easier. This guide will help you learn the basics of Kubernetes, set it up in Docker Desktop, use <code>kubectl</code>, and deploy NGINX.</p>
+<h2 id="what-is-kubernetes">What is Kubernetes?</h2>
+<p>Kubernetes is a free, open-source system that helps automate the management of applications in containers. It simplifies the deployment and operation of applications by handling the underlying infrastructure for you. Here’s a quick look at its main features:</p>
+<h3 id="key-concepts">Key Concepts</h3>
+<ol>
+<li><strong>Pod</strong>:</li>
+<li><strong>What It Is</strong>: The smallest unit in Kubernetes. A Pod can hold one or more containers that share the same network and storage.</li>
+<li>
+<p><strong>What It Does</strong>: Runs single instances of applications or services, keeping them consistent and separate from others.</p>
+</li>
+<li>
+<p><strong>Deployment</strong>:</p>
+</li>
+<li><strong>What It Is</strong>: Manages how Pods are deployed and scaled. It ensures that the right number of Pods are running and helps with updates.</li>
+<li>
+<p><strong>What It Does</strong>: Automates creating, updating, and scaling Pods, making sure your app is always available.</p>
+</li>
+<li>
+<p><strong>Service</strong>:</p>
+</li>
+<li><strong>What It Is</strong>: Defines a way to access a set of Pods and provides a stable network address.</li>
+<li>
+<p><strong>What It Does</strong>: Helps with load balancing and finding services, ensuring reliable communication between app parts.</p>
+</li>
+<li>
+<p><strong>ReplicaSet</strong>:</p>
+</li>
+<li><strong>What It Is</strong>: Ensures a specified number of Pod copies are running. Usually managed by Deployments.</li>
+<li>
+<p><strong>What It Does</strong>: Keeps your app reliable and scalable by maintaining the right number of Pod copies.</p>
+</li>
+<li>
+<p><strong>Namespace</strong>:</p>
+</li>
+<li><strong>What It Is</strong>: Divides cluster resources into virtual clusters to organize and control access.</li>
+<li><strong>What It Does</strong>: Useful for separating environments like development and production, or for managing different projects.</li>
+</ol>
+<h2 id="setting-up-kubernetes-in-docker-desktop">Setting Up Kubernetes in Docker Desktop</h2>
+<p>Docker Desktop includes a built-in Kubernetes cluster for local development. Here’s how to set it up:</p>
+<ol>
+<li><strong>Open Docker Desktop</strong>:</li>
+<li>
+<p>Start Docker Desktop from your applications menu.</p>
+</li>
+<li>
+<p><strong>Go to Settings</strong>:</p>
+</li>
+<li>
+<p>Click the gear icon (⚙️) in the top-right corner.</p>
+</li>
+<li>
+<p><strong>Select the Kubernetes Tab</strong>:</p>
+</li>
+<li>
+<p>Choose the "Kubernetes" tab from the sidebar.</p>
+</li>
+<li>
+<p><strong>Enable Kubernetes</strong>:</p>
+</li>
+<li>
+<p>Check "Enable Kubernetes".</p>
+</li>
+<li>
+<p><strong>Apply &amp; Restart</strong>:</p>
+</li>
+<li>
+<p>Click "Apply &amp; Restart" to start Kubernetes. Docker Desktop will restart to configure it.</p>
+</li>
+<li>
+<p><strong>Wait for Setup</strong>:</p>
+</li>
+<li>It might take a few minutes for Kubernetes to start. Docker Desktop will show the setup status.</li>
+</ol>
+<h2 id="what-is-kubectl">What is <code>kubectl</code>?</h2>
+<p><code>kubectl</code> is a command-line tool for managing Kubernetes clusters. It lets you interact with your Kubernetes resources.</p>
+<h3 id="key-features-of-kubectl">Key Features of <code>kubectl</code>:</h3>
 <ul>
-<li><strong>DevOps Tips and Best Practices</strong>: Learn about the latest tools and techniques to streamline your DevOps pipelines and optimize your CI/CD workflows.</li>
-<li><strong>SRE Tools</strong>: Discover tools and methods for Site Reliability Engineering (SRE), and how to implement them to improve service reliability.</li>
-<li><strong>Tutorials and Guides</strong>: Step-by-step tutorials to help you set up and use various DevOps and SRE tools.</li>
-<li><strong>Community Forums</strong>: Engage with the community and share your thoughts on best practices, challenges, and new tools.</li>
+<li><strong>Run Commands</strong>: Manage resources like Pods, Services, and Deployments.</li>
+<li><strong>Change Configurations</strong>: Apply changes to create or update resources.</li>
+<li><strong>Check Status</strong>: View and debug the state of resources in the cluster.</li>
 </ul>
-<h2 id="about-me">About Me</h2>
-<p>I am Sameer Alam, a passionate DevOps engineer and site reliability advocate. I have spent years exploring various tools and strategies for better system management, and I now share my experiences and insights on this blog. You can explore my work and contributions on GitHub:</p>
-<p><a href="https://github.com/sameeralam3127">My GitHub Profile</a></p>
-<h2 id="blog-archive">Blog Archive</h2>
-<p>Explore the articles from my old Blogger blog, which was started in 2016. You can still access the older content here:</p>
-<p><a href="https://compute-central.blogspot.com/">Old Blog Archive</a></p>
-<p>Feel free to explore and get in touch if you have any questions or feedback. Happy learning!</p>
+<h3 id="common-kubectl-commands">Common <code>kubectl</code> Commands:</h3>
+<ul>
+<li><strong>Get Resources</strong>:
+  <code>bash
+  kubectl get [resource]</code></li>
+<li>
+<p>Lists resources like Pods, Services, or Deployments.</p>
+</li>
+<li>
+<p><strong>Describe Resource</strong>:
+  <code>bash
+  kubectl describe [resource] [name]</code></p>
+</li>
+<li>
+<p>Shows detailed info about a specific resource.</p>
+</li>
+<li>
+<p><strong>Apply Configuration</strong>:
+  <code>bash
+  kubectl apply -f [file.yaml]</code></p>
+</li>
+<li>
+<p>Applies changes from a YAML file.</p>
+</li>
+<li>
+<p><strong>Delete Resource</strong>:
+  <code>bash
+  kubectl delete -f [file.yaml]</code></p>
+</li>
+<li>Deletes resources from the cluster.
+-<strong>If you want to delete all the pods in a namespace, use:</strong></li>
+</ul>
+<pre><code class="language-bash">kubectl delete pods --all
+</code></pre>
+<p>-<strong>To delete all services in the current namespace, use:</strong></p>
+<pre><code class="language-bash">kubectl delete services --all
+</code></pre>
+<h2 id="checking-versions">Checking Versions</h2>
+<h3 id="check-kubectl-version">Check <code>kubectl</code> Version</h3>
+<p>To find out which version of <code>kubectl</code> you have:</p>
+<pre><code class="language-bash">kubectl version --client
+</code></pre>
+<pre><code class="language-bash">kubectl version
+</code></pre>
+<ul>
+<li>This shows both the client and server versions of Kubernetes.</li>
+</ul>
+<h2 id="deploying-nginx-instances">Deploying NGINX Instances</h2>
+<p>To deploy multiple NGINX instances, follow these steps:</p>
+<h3 id="step-1-create-a-deployment">Step 1: Create a Deployment</h3>
+<ol>
+<li><strong>Open Terminal</strong>:</li>
+<li>
+<p>Use your terminal or command prompt.</p>
+</li>
+<li>
+<p><strong>Create Deployment YAML File</strong>:</p>
+</li>
+<li>Save the following to <code>nginx-deployment.yaml</code>:</li>
+</ol>
+<p><code>yaml
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: nginx-deployment
+   spec:
+     replicas: 3
+     selector:
+       matchLabels:
+         app: nginx
+     template:
+       metadata:
+         labels:
+           app: nginx
+       spec:
+         containers:
+         - name: nginx
+           image: nginx:latest
+           ports:
+           - containerPort: 80</code></p>
+<ul>
+<li>
+<p><strong>What It Does</strong>: Defines a Deployment with 3 replicas of NGINX.</p>
+</li>
+<li>
+<p><strong>Apply the Deployment</strong>:</p>
+</li>
+<li>Run:</li>
+</ul>
+<p><code>bash
+   kubectl apply -f nginx-deployment.yaml</code></p>
+<h3 id="step-2-expose-the-deployment">Step 2: Expose the Deployment</h3>
+<ol>
+<li><strong>Create Service YAML File</strong>:</li>
+<li>Save the following to <code>nginx-service.yaml</code>:</li>
+</ol>
+<p><code>yaml
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: nginx-service
+   spec:
+     selector:
+       app: nginx
+     ports:
+       - protocol: TCP
+         port: 80
+         targetPort: 80
+     type: LoadBalancer</code></p>
+<ul>
+<li>
+<p><strong>What It Does</strong>: Creates a Service to expose the NGINX Deployment.</p>
+</li>
+<li>
+<p><strong>Apply the Service</strong>:</p>
+</li>
+<li>Run:</li>
+</ul>
+<p><code>bash
+   kubectl apply -f nginx-service.yaml</code></p>
+<ol>
+<li><strong>Access NGINX in Browser</strong>:</li>
+<li>Open:</li>
+</ol>
+<p><code>bash
+   http://127.0.0.1/</code></p>
+<h3 id="step-3-check-the-status">Step 3: Check the Status</h3>
+<ol>
+<li><strong>List Pods</strong>:</li>
+<li>Check Pods:</li>
+</ol>
+<p><code>bash
+   kubectl get pods</code></p>
+<ol>
+<li><strong>Check Deployment</strong>:</li>
+<li>Verify Deployment:</li>
+</ol>
+<p><code>bash
+   kubectl get deployments</code></p>
+<ol>
+<li><strong>Check Service</strong>:</li>
+<li>View Service status:</li>
+</ol>
+<p><code>bash
+   kubectl get services</code></p>
+<ul>
+<li><strong>Note</strong>: Docker Desktop has a Kubernetes dashboard for a visual view of your resources.</li>
+</ul>
+<h3 id="step-4-clean-up">Step 4: Clean Up</h3>
+<ol>
+<li><strong>Delete the Service</strong>:</li>
+</ol>
+<p><code>bash
+   kubectl delete -f nginx-service.yaml</code></p>
+<ol>
+<li><strong>Delete the Deployment</strong>:</li>
+</ol>
+<p><code>bash
+   kubectl delete -f nginx-deployment.yaml</code></p>
+<ol>
+<li><strong>Verify Deletion</strong>:</li>
+<li>Ensure Pods and Services are removed:</li>
+</ol>
+<p><code>bash
+   kubectl get pods
+   kubectl get services</code></p>
+<hr />
 
 
 
@@ -1053,10 +1290,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tabs.link", "content.tooltips", "header.autohide", "navigation.expand", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>

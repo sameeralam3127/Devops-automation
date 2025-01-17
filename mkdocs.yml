@@ -1,6 +1,6 @@
 # Project information
-site_name: DevOps Automation
-site_url: https://sameeralam3127.github.io/DevOps-automation/
+site_name: Compute Central
+site_url: https://www.computecentral.in/
 site_author: Sameer Alam
 # Copyright
 copyright: Copyright &copy; 2016 - 2025 Sameer Alam
@@ -28,7 +28,7 @@ theme:
     # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
     - search.highlight
@@ -57,9 +57,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: logo
+
 
 # Plugins
 plugins:
@@ -84,9 +82,23 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Ansible: Ansible\WSL\README.md
-  - Docker: Docker\README.md
-  - Jenkins: Jenkins\README.md
-  - Jenkins\Java App\Java_Project.md
-  - Kubernetes: Kubernetes\README.md
-  - Linux: Linux\https.md
+  - Docker:
+      - Containerization techniques: docker/docker.md
+  - Kubernetes:
+      - Managing containerized applications in Kubernetes clusters: kubernetes/kubernetes.md    
+  - Jenkins:
+      - Automating CI/CD pipelines with Jenkins: jenkins/jenkins.md
+  - SonarQube:
+      - Implementing continuous inspection of code quality: sonarqube/code-quality.md
+  - CI/CD Tools:
+      - Full CI/CD pipeline examples: cicd-tools/pipeline-examples.md
+  - Shell Scripts:
+      - Handy scripts to automate routine tasks: shell-scripts/handy-scripts.md
+  - Ansible:
+      - Automating infrastructure management and provisioning: ansible/ansible.md
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
