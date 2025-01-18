@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.computecentral.in/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/ansible/ansible/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/ansible/ansible/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/cicd-tools/pipeline-examples/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/cicd-tools/pipeline-examples/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/docker/docker/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/docker/docker/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/jenkins/jenkins/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/jenkins/jenkins/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/kubernetes/kubernetes/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/kubernetes/kubernetes/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/shell-scripts/handy-scripts/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/shell-scripts/handy-scripts/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/sonarqube/sonarqube/</loc>
+         <loc>https://sameeralam3127.github.io/Devops-automation/sonarqube/sonarqube/</loc>
          <lastmod>2025-01-18</lastmod>
     </url>
 </urlset>

@@ -1,6 +1,6 @@
-# Welcome to Compute Central
+# Welcome to Devops Automation 
 
-Hello and welcome to **Compute Central**—your ultimate hub for everything **DevOps** and **Site Reliability Engineering (SRE)**! Whether you're a seasoned professional or just starting out, I am here to help you unlock your potential with cutting-edge tools, actionable tips, and an engaged community of like-minded enthusiasts.  
+Hello and welcome to **Devops Automation** your ultimate hub for everything **DevOps** and **Site Reliability Engineering (SRE)**! Whether you're a seasoned professional or just starting out, I am here to help you unlock your potential with cutting-edge tools, actionable tips, and an engaged community of like-minded enthusiasts.  
 
 🎯 **DevOps Tips**  
 Master the art of seamless integration and delivery with advice and best practices.
