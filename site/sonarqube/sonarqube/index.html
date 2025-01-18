@@ -10,13 +10,13 @@
         <meta name="author" content="Sameer Alam">
       
       
-        <link rel="canonical" href="https://www.computecentral.in/jenkins/jenkins/">
+        <link rel="canonical" href="https://www.computecentral.in/sonarqube/sonarqube/">
       
       
-        <link rel="prev" href="../../kubernetes/kubernetes/">
+        <link rel="prev" href="../../jenkins/jenkins/">
       
       
-        <link rel="next" href="../../sonarqube/sonarqube/">
+        <link rel="next" href="../../cicd-tools/pipeline-examples/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Automating CI/CD pipelines with Jenkins - Compute Central</title>
+        <title>Implementing continuous inspection of code quality - Compute Central</title>
       
     
     
@@ -119,7 +119,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jenkins-installation-and-first-pipeline-setup-on-ubuntu" class="md-skip">
+        <a href="#sonarqube-installation-configuration-and-integration-with-jenkins" class="md-skip">
           Skip to content
         </a>
       
@@ -155,7 +155,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automating CI/CD pipelines with Jenkins
+              Implementing continuous inspection of code quality
             
           </span>
         </div>
@@ -306,13 +306,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../jenkins/jenkins/" class="md-tabs__link">
           
   
     
@@ -328,11 +326,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -618,6 +618,80 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jenkins/jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automating CI/CD pipelines with Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -642,24 +716,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Jenkins
+    SonarQube
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Jenkins
+            SonarQube
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -683,7 +757,7 @@
           
   
   <span class="md-ellipsis">
-    Automating CI/CD pipelines with Jenkins
+    Implementing continuous inspection of code quality
   </span>
   
 
@@ -694,7 +768,7 @@
         
   
   <span class="md-ellipsis">
-    Automating CI/CD pipelines with Jenkins
+    Implementing continuous inspection of code quality
   </span>
   
 
@@ -716,55 +790,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-installing-jenkins-on-ubuntu" class="md-nav__link">
+  <a href="#what-is-sonarqube" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Installing Jenkins on Ubuntu
+      What is SonarQube?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 1: Installing Jenkins on Ubuntu">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-installing-sonarqube-on-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Installing SonarQube on Ubuntu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Installing SonarQube on Ubuntu">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-update-system-packages" class="md-nav__link">
+  <a href="#11-prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1 Update System Packages
+      1.1 Prerequisites
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-install-java" class="md-nav__link">
+  <a href="#12-install-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Install Java
+      1.2 Install Dependencies
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#13-add-jenkins-repository" class="md-nav__link">
+  <a href="#13-download-and-install-sonarqube" class="md-nav__link">
     <span class="md-ellipsis">
-      1.3 Add Jenkins Repository
+      1.3 Download and Install SonarQube
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#14-install-jenkins" class="md-nav__link">
+  <a href="#14-configure-sonarqube" class="md-nav__link">
     <span class="md-ellipsis">
-      1.4 Install Jenkins
+      1.4 Configure SonarQube
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#15-start-jenkins" class="md-nav__link">
+  <a href="#15-start-sonarqube" class="md-nav__link">
     <span class="md-ellipsis">
-      1.5 Start Jenkins
+      1.5 Start SonarQube
     </span>
   </a>
   
@@ -776,28 +859,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-accessing-jenkins" class="md-nav__link">
+  <a href="#step-2-installing-the-sonarqube-plugin-for-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Accessing Jenkins
+      Step 2: Installing the SonarQube Plugin for Jenkins
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 2: Accessing Jenkins">
+    <nav class="md-nav" aria-label="Step 2: Installing the SonarQube Plugin for Jenkins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-unlock-jenkins" class="md-nav__link">
+  <a href="#21-install-the-plugin" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Unlock Jenkins
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-install-suggested-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 Install Suggested Plugins
+      2.1 Install the Plugin
     </span>
   </a>
   
@@ -809,46 +883,94 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-creating-your-first-jenkins-pipeline" class="md-nav__link">
+  <a href="#step-3-configuring-sonarqube-in-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Creating Your First Jenkins Pipeline
+      Step 3: Configuring SonarQube in Jenkins
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 3: Creating Your First Jenkins Pipeline">
+    <nav class="md-nav" aria-label="Step 3: Configuring SonarQube in Jenkins">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-create-a-new-pipeline-project" class="md-nav__link">
+  <a href="#31-configure-sonarqube-server-in-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
-      3.1 Create a New Pipeline Project
+      3.1 Configure SonarQube Server in Jenkins
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-configure-the-pipeline" class="md-nav__link">
+  <a href="#32-install-the-sonarqube-scanner-in-jenkins" class="md-nav__link">
     <span class="md-ellipsis">
-      3.2 Configure the Pipeline
+      3.2 Install the SonarQube Scanner in Jenkins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-a-jenkins-pipeline-to-run-sonarqube-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Create a Jenkins Pipeline to Run SonarQube Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 4: Create a Jenkins Pipeline to Run SonarQube Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-create-a-new-jenkins-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Create a New Jenkins Pipeline
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-create-a-bash-script" class="md-nav__link">
+  <a href="#42-define-the-pipeline-script" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3 Create a Bash Script
+      4.2 Define the Pipeline Script
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#34-run-the-pipeline" class="md-nav__link">
+  <a href="#43-run-the-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      3.4 Run the Pipeline
+      4.3 Run the Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-view-sonarqube-analysis-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: View SonarQube Analysis Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: View SonarQube Analysis Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
     </span>
   </a>
   
@@ -863,80 +985,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    SonarQube
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            SonarQube
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Implementing continuous inspection of code quality
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1186,101 +1234,156 @@
                   
 
 
-<h1 id="jenkins-installation-and-first-pipeline-setup-on-ubuntu">Jenkins Installation and First Pipeline Setup on Ubuntu</h1>
+<h1 id="sonarqube-installation-configuration-and-integration-with-jenkins">SonarQube Installation, Configuration, and Integration with Jenkins</h1>
 <details class="info">
-<summary>Mastering Jenkins: Installing on Ubuntu and Creating Your First Pipeline</summary>
-<p>Jenkins is an open-source automation server that helps with continuous integration and continuous delivery (CI/CD). This guide will walk you through the process of installing Jenkins on Ubuntu, checking system details using a Bash script, and creating your first pipeline using Jenkins' powerful pipeline functionality.</p>
+<summary>Mastering SonarQube: Installation, Configuration, and Jenkins Integration</summary>
+<p>SonarQube is an open-source platform that provides continuous inspection of code quality. It performs automatic reviews to detect bugs, vulnerabilities, and code smells in your codebase. This guide will walk you through installing SonarQube on Ubuntu, configuring it, and integrating it with Jenkins to enhance your continuous integration and continuous delivery (CI/CD) pipeline.</p>
 </details>
 <hr />
-<h2 id="step-1-installing-jenkins-on-ubuntu"><strong>Step 1: Installing Jenkins on Ubuntu</strong></h2>
-<p>Before we begin, ensure your system is up-to-date.</p>
-<h3 id="11-update-system-packages"><strong>1.1 Update System Packages</strong></h3>
-<p>First, update your system’s package list to ensure everything is up to date:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade<span class="w"> </span>-y
-</span></code></pre></div>
-<h3 id="12-install-java"><strong>1.2 Install Java</strong></h3>
-<p>Jenkins requires Java to run. Install the default Java Development Kit (JDK):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-11-jdk<span class="w"> </span>-y
-</span></code></pre></div>
-<p>To verify the installation, use:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>java<span class="w"> </span>-version
-</span></code></pre></div>
-<h3 id="13-add-jenkins-repository"><strong>1.3 Add Jenkins Repository</strong></h3>
-<p>To install Jenkins, add its official repository to your system:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>wget<span class="w"> </span>-q<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span>https://pkg.jenkins.io/jenkins.io.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/trusted.gpg.d/jenkins.asc
-</span></code></pre></div>
-<p>Next, add the Jenkins repository:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo deb http://pkg.jenkins.io/debian/ stable main &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
-</span></code></pre></div>
-<h3 id="14-install-jenkins"><strong>1.4 Install Jenkins</strong></h3>
-<p>Once the repository is added, update the package list and install Jenkins:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>jenkins<span class="w"> </span>-y
-</span></code></pre></div>
-<h3 id="15-start-jenkins"><strong>1.5 Start Jenkins</strong></h3>
-<p>Enable and start the Jenkins service:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jenkins
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>jenkins
-</span></code></pre></div>
-<p>You can check the status of Jenkins:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>jenkins
-</span></code></pre></div>
+<h2 id="what-is-sonarqube"><strong>What is SonarQube?</strong></h2>
+<p>SonarQube is a powerful tool for continuous code quality inspection. It helps developers identify and fix issues early in the development lifecycle, ensuring that their code is secure, maintainable, and efficient. SonarQube can analyze code in various programming languages, providing feedback on code quality metrics such as bugs, vulnerabilities, code smells, duplications, and test coverage.</p>
 <hr />
-<h2 id="step-2-accessing-jenkins"><strong>Step 2: Accessing Jenkins</strong></h2>
-<p>Jenkins will be running on port 8080 by default. Open your browser and navigate to:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>http://localhost:8080
+<h2 id="step-1-installing-sonarqube-on-ubuntu"><strong>Step 1: Installing SonarQube on Ubuntu</strong></h2>
+<h3 id="11-prerequisites"><strong>1.1 Prerequisites</strong></h3>
+<p>Before installing SonarQube, ensure that you have Java (JDK 11 or newer) installed. If not, install it using the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-11-jdk<span class="w"> </span>-y
 </span></code></pre></div>
-<h3 id="21-unlock-jenkins"><strong>2.1 Unlock Jenkins</strong></h3>
-<p>To unlock Jenkins, you will need the <code>initialAdminPassword</code>. Retrieve it with the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>cat<span class="w"> </span>/var/lib/jenkins/secrets/initialAdminPassword
+<p>Verify the Java installation:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java<span class="w"> </span>-version
 </span></code></pre></div>
-<p>Enter the password in the browser prompt.</p>
-<h3 id="22-install-suggested-plugins"><strong>2.2 Install Suggested Plugins</strong></h3>
-<p>Once you’ve unlocked Jenkins, you'll be prompted to install plugins. Choose the "Install suggested plugins" option to proceed with the default plugin installation.</p>
+<h3 id="12-install-dependencies"><strong>1.2 Install Dependencies</strong></h3>
+<p>SonarQube requires PostgreSQL as its database backend. To install PostgreSQL:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>postgresql<span class="w"> </span>postgresql-contrib<span class="w"> </span>-y
+</span></code></pre></div>
+<p>After installation, create a new database and user for SonarQube:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>CREATE<span class="w"> </span>USER<span class="w"> </span>sonar<span class="w"> </span>WITH<span class="w"> </span>PASSWORD<span class="w"> </span><span class="s1">&#39;sonar&#39;</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sonar<span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>DATABASE<span class="w"> </span>sonar<span class="w"> </span>TO<span class="w"> </span>sonar<span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="se">\q</span>
+</span></code></pre></div>
+<h3 id="13-download-and-install-sonarqube"><strong>1.3 Download and Install SonarQube</strong></h3>
+<p>Now, download the latest version of SonarQube from the official website:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>wget<span class="w"> </span>https://binaries.sonarsource.com/CommercialEdition/sonarqube-9.3.0.51899.zip
+</span></code></pre></div>
+<p>Unzip the downloaded file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>unzip<span class="w"> </span>sonarqube-9.3.0.51899.zip
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>mv<span class="w"> </span>sonarqube-9.3.0.51899<span class="w"> </span>/opt/sonarqube
+</span></code></pre></div>
+<h3 id="14-configure-sonarqube"><strong>1.4 Configure SonarQube</strong></h3>
+<p>Navigate to the SonarQube configuration file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/sonarqube/conf
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sonar.properties
+</span></code></pre></div>
+<p>Edit the following properties to set up your PostgreSQL database:</p>
+<div class="language-properties highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="na">sonar.jdbc.url</span><span class="o">=</span><span class="s">jdbc:postgresql://localhost/sonar</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">sonar.jdbc.username</span><span class="o">=</span><span class="s">sonar</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="na">sonar.jdbc.password</span><span class="o">=</span><span class="s">sonar</span>
+</span></code></pre></div>
+<h3 id="15-start-sonarqube"><strong>1.5 Start SonarQube</strong></h3>
+<p>SonarQube is bundled with a script to start the application. You can start SonarQube using the following commands:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/sonarqube/bin/linux-x86-64
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>./sonar.sh<span class="w"> </span>start
+</span></code></pre></div>
+<p>You can verify that SonarQube is running by visiting:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>http://localhost:9000
+</span></code></pre></div>
+<p>The default login credentials are:
+- <strong>Username</strong>: admin
+- <strong>Password</strong>: admin</p>
 <hr />
-<h2 id="step-3-creating-your-first-jenkins-pipeline"><strong>Step 3: Creating Your First Jenkins Pipeline</strong></h2>
-<h3 id="31-create-a-new-pipeline-project"><strong>3.1 Create a New Pipeline Project</strong></h3>
+<h2 id="step-2-installing-the-sonarqube-plugin-for-jenkins"><strong>Step 2: Installing the SonarQube Plugin for Jenkins</strong></h2>
+<p>To integrate SonarQube with Jenkins, you need to install the <strong>SonarQube Scanner for Jenkins</strong> plugin.</p>
+<h3 id="21-install-the-plugin"><strong>2.1 Install the Plugin</strong></h3>
 <ol>
-<li>After logging into Jenkins, click on <strong>New Item</strong>.</li>
-<li>Enter a name for your pipeline (e.g., "First-Pipeline").</li>
-<li>Select <strong>Pipeline</strong> and click <strong>OK</strong>.</li>
+<li>Open Jenkins in your browser (<code>http://localhost:8080</code>).</li>
+<li>Navigate to <strong>Manage Jenkins</strong> &gt; <strong>Manage Plugins</strong>.</li>
+<li>Search for <strong>SonarQube Scanner</strong> in the <strong>Available</strong> tab and install it.</li>
 </ol>
-<h3 id="32-configure-the-pipeline"><strong>3.2 Configure the Pipeline</strong></h3>
-<p>In the pipeline configuration page, scroll down to the <strong>Pipeline</strong> section. Here, you'll define your pipeline script. For this guide, we’ll use a simple pipeline that checks system details using a Bash script.</p>
+<hr />
+<h2 id="step-3-configuring-sonarqube-in-jenkins"><strong>Step 3: Configuring SonarQube in Jenkins</strong></h2>
+<h3 id="31-configure-sonarqube-server-in-jenkins"><strong>3.1 Configure SonarQube Server in Jenkins</strong></h3>
+<ol>
+<li>Go to <strong>Manage Jenkins</strong> &gt; <strong>Configure System</strong>.</li>
+<li>Scroll down to the <strong>SonarQube Servers</strong> section.</li>
+<li>Click <strong>Add SonarQube</strong> and enter the following details:</li>
+<li><strong>Name</strong>: SonarQube (or any name you prefer)</li>
+<li><strong>Server URL</strong>: <code>http://localhost:9000</code></li>
+<li><strong>Authentication Token</strong>: To generate an authentication token, log in to SonarQube and go to <strong>My Account</strong> &gt; <strong>Security</strong> &gt; <strong>Generate Tokens</strong>.</li>
+</ol>
+<h3 id="32-install-the-sonarqube-scanner-in-jenkins"><strong>3.2 Install the SonarQube Scanner in Jenkins</strong></h3>
+<ol>
+<li>In the <strong>SonarQube Scanner</strong> section, click <strong>Add SonarQube Scanner</strong>.</li>
+<li>Enter the <strong>Installation Name</strong> (e.g., SonarQube Scanner) and set the <strong>Version</strong>.</li>
+</ol>
+<p>Jenkins will automatically detect the SonarQube Scanner when the plugin is installed.</p>
+<hr />
+<h2 id="step-4-create-a-jenkins-pipeline-to-run-sonarqube-analysis"><strong>Step 4: Create a Jenkins Pipeline to Run SonarQube Analysis</strong></h2>
+<h3 id="41-create-a-new-jenkins-pipeline"><strong>4.1 Create a New Jenkins Pipeline</strong></h3>
+<ol>
+<li>From the Jenkins dashboard, click on <strong>New Item</strong>.</li>
+<li>Choose <strong>Pipeline</strong> and give it a name (e.g., <strong>SonarQube-Pipeline</strong>).</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<h3 id="42-define-the-pipeline-script"><strong>4.2 Define the Pipeline Script</strong></h3>
+<p>Add the following script in the <strong>Pipeline</strong> section. This pipeline will perform a SonarQube analysis on your project:</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Check System Details&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">                </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;bash check_system_details.sh&#39;</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                </span><span class="o">}</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="n">SONARQUBE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SonarQube&#39;</span><span class="w">  </span><span class="c1">// The name of the SonarQube server configured in Jenkins</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Checkout&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                </span><span class="n">git</span><span class="w"> </span><span class="s1">&#39;https://github.com/your-repository-url.git&#39;</span>
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">            </span><span class="o">}</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="o">}</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;SonarQube Analysis&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                    </span><span class="c1">// Run the SonarQube scanner</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot;sonar-scanner&quot;</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                </span><span class="o">}</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">            </span><span class="o">}</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="o">}</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">                </span><span class="c1">// Build your project (e.g., using Maven, Gradle, etc.)</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn clean install&#39;</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">            </span><span class="o">}</span>
+</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="o">}</span>
+</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="o">}</span>
 </span></code></pre></div>
-<h3 id="33-create-a-bash-script"><strong>3.3 Create a Bash Script</strong></h3>
-<p>In your Jenkins workspace, create a script called <code>check_system_details.sh</code>. This script will gather system information.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;System Information:&quot;</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;--------------------&quot;</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>hostnamectl
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="nb">echo</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>df<span class="w"> </span>-h
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="nb">echo</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>free<span class="w"> </span>-h
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="nb">echo</span>
-</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>uname<span class="w"> </span>-a
-</span></code></pre></div>
-<p>Ensure that the script has executable permissions:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>chmod<span class="w"> </span>+x<span class="w"> </span>check_system_details.sh
-</span></code></pre></div>
-<h3 id="34-run-the-pipeline"><strong>3.4 Run the Pipeline</strong></h3>
-<p>Save the pipeline and click <strong>Build Now</strong> to execute the pipeline. Jenkins will run the <code>check_system_details.sh</code> script, and you should see the system details in the build log.</p>
+<h3 id="43-run-the-pipeline"><strong>4.3 Run the Pipeline</strong></h3>
+<p>Save the pipeline and click <strong>Build Now</strong>. Jenkins will execute the pipeline, run the SonarQube analysis, and publish the results to SonarQube.</p>
 <hr />
+<h2 id="step-5-view-sonarqube-analysis-results"><strong>Step 5: View SonarQube Analysis Results</strong></h2>
+<p>After the pipeline runs, you can view the results by logging into the SonarQube dashboard at:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>http://localhost:9000
+</span></code></pre></div>
+<p>Here, you’ll see detailed code quality metrics, including:</p>
+<ul>
+<li>Code coverage</li>
+<li>Code duplication</li>
+<li>Code smells</li>
+<li>Vulnerabilities</li>
+<li>Bugs</li>
+</ul>
+<hr />
+<p>By following these steps, you’ve successfully installed SonarQube, configured it, and integrated it with Jenkins to perform continuous code quality analysis. With SonarQube integrated into your Jenkins pipeline, you can automatically monitor code quality, identify issues early, and maintain high-quality code throughout your development lifecycle.</p>
+<hr />
+<p>?? info "Tip"
+    For better code quality enforcement, integrate SonarQube with Jenkins' automated build and testing process to prevent merging code that does not meet your quality standards.</p>
+<p>```</p>
+<h3 id="key-features">Key Features:</h3>
+<ol>
+<li><strong>SonarQube Setup</strong>: The guide walks users through installing and configuring SonarQube on Ubuntu with PostgreSQL as the database backend.</li>
+<li><strong>Jenkins Integration</strong>: Instructions on integrating SonarQube with Jenkins via the SonarQube Scanner plugin.</li>
+<li><strong>Pipeline Example</strong>: A Jenkins pipeline example that runs SonarQube analysis as part of the build process.</li>
+<li><strong>User-Friendly Navigation</strong>: This guide is broken down into easy-to-follow steps with detailed explanations for each phase.</li>
+</ol>
 
 
 

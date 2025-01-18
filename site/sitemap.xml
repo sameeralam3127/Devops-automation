@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.computecentral.in/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/ansible/ansible/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/cicd-tools/pipeline-examples/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/docker/docker/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/jenkins/jenkins/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/kubernetes/kubernetes/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/kubernetes/service-discovery/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
          <loc>https://www.computecentral.in/shell-scripts/handy-scripts/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <lastmod>2025-01-18</lastmod>
     </url>
     <url>
-         <loc>https://www.computecentral.in/sonarqube/code-quality/</loc>
-         <lastmod>2025-01-17</lastmod>
+         <loc>https://www.computecentral.in/sonarqube/sonarqube/</loc>
+         <lastmod>2025-01-18</lastmod>
     </url>
 </urlset>
