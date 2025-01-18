@@ -23,46 +23,53 @@ theme:
       bug: fontawesome/solid/robot
       example: simple/ubuntu
       quote: fontawesome/solid/quote-left 
- 
+  
   features:
-      - navigation.instant # Single page instant refresh
-      - navigation.tabs # Navigation tabs across top
-      - navigation.tracking # URL updated with active anchor
-      - navigation.sections # Top-level tabs rendered in sidebar
-      - navigation.top # Back to top button at bottom right
-      - navigation.expand # Expand left sidebar by default
-      - navigation.tabs.sticky # Tab always displayed
-      - navigation.indexes
-      - search.suggest
-      - search.share
-      - search.highlight
-      - toc.integrate # Integrate page TOC in left sidebar - wider page
-      - content.tabs.link
-      - content.code.annotation
-      - content.code.copy
-      - content.code.select
-      - announce.dismiss
-      - content.action.edit
-      - content.action.view
-      - content.footnote.tooltips
-      - content.tooltips
+    - navigation.instant # Single page instant refresh
+    - navigation.tabs # Navigation tabs across top
+    - navigation.tracking # URL updated with active anchor
+    - navigation.sections # Top-level tabs rendered in sidebar
+    - navigation.top # Back to top button at bottom right
+    - navigation.expand # Expand left sidebar by default
+    - navigation.tabs.sticky # Tab always displayed
+    - navigation.indexes
+    - search.suggest
+    - search.share
+    - search.highlight
+    - toc.integrate # Integrate page TOC in left sidebar - wider page
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.footnote.tooltips
+    - content.tooltips
+    - navigation.search # Search bar in navigation
+    - navigation.subsections # Show subsections in navigation
+    - content.social.share # Social sharing buttons
 
   language: en
-
-  
   palette:
-    - scheme: slate
-      primary: black
-      accent: blue
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-4
+        icon: material/link
         name: Switch to light mode
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
-      accent: blue
+      accent: indigo
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -83,17 +90,14 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
- 
-  - md_in_html
   - tables
   - def_list
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-
+  - md_in_html
+  - abbr
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
 
 nav:
   - Home: index.md
