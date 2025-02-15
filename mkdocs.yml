@@ -112,7 +112,7 @@ nav:
   - Monitoring Tools:
       - Full CI/CD pipeline examples: cicd-tools/pipeline-examples.md
   - Shell Scripts:
-      - Handy scripts to automate routine tasks: shell-scripts/handy-scripts.md
+      - Handy scripts to automate routine tasks: shell-scripts/scripts.md
   - Ansible:
       - Automating infrastructure management and provisioning: ansible/ansible.md
 
