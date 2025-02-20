@@ -93,7 +93,6 @@
 
 ## **Docker Command Cheat Sheet**
 
-#### **Basic Commands**
 
 - **Check Docker Version**  
   Verify the Docker installation and version:

@@ -31,7 +31,7 @@ theme:
     - navigation.sections # Top-level tabs rendered in sidebar
     - navigation.top # Back to top button at bottom right
     - navigation.expand # Expand left sidebar by default
-    - navigation.tabs.sticky # Tab always displayed
+    #- navigation.tabs.sticky # Tab always displayed
     - navigation.indexes
     - search.suggest
     - search.share
@@ -58,8 +58,8 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: light-blue
+      accent: black
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
@@ -107,14 +107,11 @@ nav:
       - Kubernetes clusters: kubernetes/kubernetes.md    
   - Jenkins:
       - Automating CI/CD pipelines with Jenkins: jenkins/jenkins.md
-  - SonarQube:
-      - Implementing continuous inspection of code quality: sonarqube/sonarqube.md
+  - SonarQube: sonarqube/sonarqube.md
   - Monitoring Tools:
-      - Full CI/CD pipeline examples: cicd-tools/pipeline-examples.md
-  - Shell Scripts:
-      - Handy scripts to automate routine tasks: shell-scripts/scripts.md
-  - Ansible:
-      - Automating infrastructure management and provisioning: ansible/ansible.md
+      - Grafana: monitoring-tools/log.md
+  - Shell Scripts: shell-scripts/scripts.md
+  - Ansible: ansible/ansible.md
 
 extra:
   generator: false
