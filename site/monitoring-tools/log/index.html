@@ -10,13 +10,13 @@
         <meta name="author" content="Sameer Alam">
       
       
-        <link rel="canonical" href="https://sameeralam3127.github.io/Devops-automation/cicd-tools/pipeline-examples/">
+        <link rel="canonical" href="https://sameeralam3127.github.io/Devops-automation/monitoring-tools/log/">
       
       
         <link rel="prev" href="../../sonarqube/sonarqube/">
       
       
-        <link rel="next" href="../../shell-scripts/handy-scripts/">
+        <link rel="next" href="../../shell-scripts/scripts/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Full CI/CD pipeline examples - Devops Automation</title>
+        <title>Grafana - Devops Automation</title>
       
     
     
@@ -119,7 +119,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#monitoring-tool" class="md-skip">
+        <a href="#what-are-prometheus-grafana-and-node-exporter" class="md-skip">
           Skip to content
         </a>
       
@@ -131,9 +131,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Devops Automation" class="md-header__button md-logo" aria-label="Devops Automation" data-md-component="logo">
       
@@ -155,7 +153,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Full CI/CD pipeline examples
+              Grafana
             
           </span>
         </div>
@@ -178,7 +176,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
@@ -250,8 +248,14 @@
     
   </nav>
   
+</header>
     
+    <div class="md-container" data-md-component="container">
       
+      
+        
+          
+            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -337,19 +341,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
+        
   
     
   
   SonarQube
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -379,19 +380,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../shell-scripts/handy-scripts/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../shell-scripts/scripts/" class="md-tabs__link">
+        
   
     
   
   Shell Scripts
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -399,32 +397,23 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../ansible/ansible/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../ansible/ansible/" class="md-tabs__link">
+        
   
     
   
   Ansible
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
     </ul>
   </div>
 </nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -704,70 +693,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
         
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     SonarQube
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            SonarQube
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Implementing continuous inspection of code quality
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -834,18 +769,173 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Full CI/CD pipeline examples
+    Grafana
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-prometheus-grafana-and-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Prometheus, Grafana, and Node Exporter?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Are Prometheus, Grafana, and Node Exporter?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-prometheus-the-time-series-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prometheus: The Time-Series Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-node-exporter-the-system-metrics-collector" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Node Exporter: The System Metrics Collector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-grafana-the-visualization-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Grafana: The Visualization Tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-and-run-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Install and Run Containers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Install and Run Containers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-pull-and-run-a-centos-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Pull and Run a CentOS Container
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-run-prometheus" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Run Prometheus
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-install-and-run-node-exporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install and Run Node Exporter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-configure-prometheus-to-scrape-node-exporter-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Configure Prometheus to Scrape Node Exporter Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-deploy-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Deploy Grafana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-prometheus-as-a-data-source-in-grafana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Add Prometheus as a Data Source in Grafana
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-import-node-exporter-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Import Node Exporter Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-managing-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Managing Containers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -865,122 +955,22 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../shell-scripts/scripts/" class="md-nav__link">
         
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Shell Scripts
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Shell Scripts
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../shell-scripts/handy-scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Handy scripts to automate routine tasks
-  </span>
-  
-
       </a>
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Ansible
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Ansible
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
   
@@ -990,19 +980,11 @@
         
   
   <span class="md-ellipsis">
-    Automating infrastructure management and provisioning
+    Ansible
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1022,7 +1004,129 @@
                   
 
 
-<h1 id="monitoring-tool">Monitoring Tool</h1>
+<p><strong>Monitoring is a crucial part of DevOps</strong>, helping teams detect issues before they become critical. In this guide, we will install <strong>Prometheus, Grafana, and Node Exporter</strong> using <strong>Podman</strong>, an alternative to Docker. By the end, you'll have a fully functional monitoring stack with visual dashboards to analyze system metrics.  </p>
+<hr />
+<h2 id="what-are-prometheus-grafana-and-node-exporter"><strong>What Are Prometheus, Grafana, and Node Exporter?</strong></h2>
+<h3 id="1-prometheus-the-time-series-database"><strong>1. Prometheus: The Time-Series Database</strong></h3>
+<p>Prometheus is an open-source monitoring system that collects and stores metrics as <strong>time-series data</strong>. It is widely used in DevOps due to its powerful querying language (<strong>PromQL</strong>) and easy integration with multiple exporters.  </p>
+<p>📌 <strong>Key Features:</strong><br />
+- Time-series data storage<br />
+- Pull-based metric collection<br />
+- Alerting and rule-based evaluations  </p>
+<h3 id="2-node-exporter-the-system-metrics-collector"><strong>2. Node Exporter: The System Metrics Collector</strong></h3>
+<p>Node Exporter is a lightweight agent that runs on a machine to collect system metrics such as CPU usage, memory utilization, disk I/O, and network statistics.  </p>
+<p>📌 <strong>Common Metrics Collected:</strong><br />
+- <strong>CPU Load:</strong> <code>node_cpu_seconds_total</code><br />
+- <strong>Memory Usage:</strong> <code>node_memory_MemAvailable_bytes</code><br />
+- <strong>Disk Space:</strong> <code>node_filesystem_avail_bytes</code><br />
+- <strong>Network Traffic:</strong> <code>node_network_receive_bytes_total</code>  </p>
+<h3 id="3-grafana-the-visualization-tool"><strong>3. Grafana: The Visualization Tool</strong></h3>
+<p>Grafana is an open-source tool that helps visualize and analyze time-series data. It allows you to create dashboards with real-time graphs, alerts, and reports.  </p>
+<p>📌 <strong>Why Use Grafana?</strong><br />
+- Connects to multiple data sources (Prometheus, MySQL, AWS CloudWatch, etc.)<br />
+- Beautiful and interactive dashboards<br />
+- Custom alerts and notifications  </p>
+<hr />
+<h1 id="step-1-install-and-run-containers"><strong>Step 1: Install and Run Containers</strong></h1>
+<p>We will use <strong>Podman</strong>, a rootless container runtime similar to Docker, to set up our monitoring stack.</p>
+<h2 id="11-pull-and-run-a-centos-container"><strong>1.1 Pull and Run a CentOS Container</strong></h2>
+<p>We'll start by running a CentOS container where we will install Node Exporter.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-dit<span class="w"> </span>--name<span class="w"> </span>centos_container<span class="w"> </span>-p<span class="w"> </span><span class="m">9100</span>:9100<span class="w"> </span>centos:latest
+</span></code></pre></div>
+<p>Verify that the container is running:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>podman<span class="w"> </span>ps
+</span></code></pre></div>
+<h2 id="12-run-prometheus"><strong>1.2 Run Prometheus</strong></h2>
+<p>Now, let's run Prometheus, which will scrape metrics from Node Exporter.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>prometheus<span class="w"> </span>-p<span class="w"> </span><span class="m">9090</span>:9090<span class="w"> </span>quay.io/prometheus/prometheus
+</span></code></pre></div>
+<p>Check if Prometheus is running properly:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>podman<span class="w"> </span>logs<span class="w"> </span>prometheus
+</span></code></pre></div>
+<p>You can now access Prometheus at:<br />
+👉 <strong>http://localhost:9090/query</strong></p>
+<p>To enter the Prometheus container:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>podman<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>prometheus<span class="w"> </span>/bin/sh
+</span></code></pre></div>
+<hr />
+<h1 id="step-2-install-and-run-node-exporter"><strong>Step 2: Install and Run Node Exporter</strong></h1>
+<p>Log into the CentOS container:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>podman<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>centos_container<span class="w"> </span>/bin/bash
+</span></code></pre></div>
+<p>Download and extract Node Exporter:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>wget<span class="w"> </span>https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-386.tar.gz
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>tar<span class="w"> </span>-xvf<span class="w"> </span>node_exporter-1.9.0.linux-386.tar.gz
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nb">cd</span><span class="w"> </span>node_exporter-1.9.0.linux-386
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>./node_exporter
+</span></code></pre></div>
+<p>Now, you can check the collected metrics at:<br />
+👉 <strong>http://localhost:9100/metrics</strong></p>
+<hr />
+<h1 id="step-3-configure-prometheus-to-scrape-node-exporter-metrics"><strong>Step 3: Configure Prometheus to Scrape Node Exporter Metrics</strong></h1>
+<p>Modify the <strong>Prometheus configuration file</strong> (<code>prometheus.yml</code>):  </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">cd</span><span class="w"> </span>/etc/prometheus
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>vim<span class="w"> </span>prometheus.yml
+</span></code></pre></div>
+<p>Add the following configuration:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">global</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Collect metrics every 15 seconds</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="nt">scrape_configs</span><span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;prometheus&quot;</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:9090&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;centos_node_exporter&quot;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;localhost:9100&quot;</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+<p>Restart Prometheus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>podman<span class="w"> </span>restart<span class="w"> </span>prometheus
+</span></code></pre></div>
+<p>Check if Prometheus is scraping Node Exporter:<br />
+👉 <strong>http://localhost:9090/targets</strong></p>
+<hr />
+<h1 id="step-4-deploy-grafana"><strong>Step 4: Deploy Grafana</strong></h1>
+<p>Run the Grafana container:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>grafana<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>grafana/grafana
+</span></code></pre></div>
+<p>Get the IP address of Prometheus:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>podman<span class="w"> </span>inspect<span class="w"> </span>-f<span class="w"> </span><span class="s1">&#39;{{ .NetworkSettings.IPAddress }}&#39;</span><span class="w"> </span>prometheus
+</span></code></pre></div>
+<p>Access Grafana at:<br />
+👉 <strong>http://localhost:3000</strong>  </p>
+<p>📌 <strong>Default Login:</strong><br />
+- <strong>Username:</strong> <code>admin</code><br />
+- <strong>Password:</strong> <code>admin</code> (change it on first login)  </p>
+<hr />
+<h1 id="step-5-add-prometheus-as-a-data-source-in-grafana"><strong>Step 5: Add Prometheus as a Data Source in Grafana</strong></h1>
+<ol>
+<li>Open <strong>Grafana</strong> (<code>http://localhost:3000</code>).  </li>
+<li>Go to <strong>Configuration &gt; Data Sources</strong>.  </li>
+<li>Click <strong>"Add Data Source"</strong>, select <strong>Prometheus</strong>.  </li>
+<li>Set the URL as <strong><code>http://prometheus:9090</code></strong>.  </li>
+<li>Click <strong>"Save &amp; Test"</strong>.  </li>
+</ol>
+<hr />
+<h1 id="step-6-import-node-exporter-dashboard"><strong>Step 6: Import Node Exporter Dashboard</strong></h1>
+<ol>
+<li>In Grafana, go to <strong>"Create" &gt; "Import"</strong>.  </li>
+<li>Enter the <strong>Dashboard ID</strong>: <code>1860</code> (or search for "Node Exporter Full").  </li>
+<li>Select <strong>Prometheus</strong> as the data source.  </li>
+<li>Click <strong>"Import"</strong>.  </li>
+</ol>
+<p>You should now see a <strong>full system monitoring dashboard</strong>! 🎉  </p>
+<hr />
+<h1 id="step-7-managing-containers"><strong>Step 7: Managing Containers</strong></h1>
+<p>To stop and remove containers:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>podman<span class="w"> </span>stop<span class="w"> </span>centos_container
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>podman<span class="w"> </span>rm<span class="w"> </span>centos_container
+</span></code></pre></div>
+<p>Restart Prometheus and Grafana:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>podman<span class="w"> </span>restart<span class="w"> </span>prometheus
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>podman<span class="w"> </span>restart<span class="w"> </span>grafana
+</span></code></pre></div>
+<hr />
 
 
 
@@ -1076,7 +1180,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.expand", "navigation.tabs.sticky", "navigation.indexes", "search.suggest", "search.share", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "announce.dismiss", "content.action.edit", "content.action.view", "content.footnote.tooltips", "content.tooltips", "navigation.search", "navigation.subsections", "content.social.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.expand", "navigation.indexes", "search.suggest", "search.share", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "announce.dismiss", "content.action.edit", "content.action.view", "content.footnote.tooltips", "content.tooltips", "navigation.search", "navigation.subsections", "content.social.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

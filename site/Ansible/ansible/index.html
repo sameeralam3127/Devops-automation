@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://sameeralam3127.github.io/Devops-automation/ansible/ansible/">
       
       
-        <link rel="prev" href="../../shell-scripts/handy-scripts/">
+        <link rel="prev" href="../../shell-scripts/scripts/">
       
       
       
@@ -22,7 +22,7 @@
     
     
       
-        <title>Automating infrastructure management and provisioning - Devops Automation</title>
+        <title>Ansible - Devops Automation</title>
       
     
     
@@ -116,6 +116,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2-setting-up-your-environment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -124,9 +129,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Devops Automation" class="md-header__button md-logo" aria-label="Devops Automation" data-md-component="logo">
       
@@ -148,7 +151,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Automating infrastructure management and provisioning
+              Ansible
             
           </span>
         </div>
@@ -171,7 +174,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
@@ -243,8 +246,14 @@
     
   </nav>
   
+</header>
     
+    <div class="md-container" data-md-component="container">
       
+      
+        
+          
+            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
@@ -330,19 +339,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
+        
   
     
   
   SonarQube
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -353,7 +359,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cicd-tools/pipeline-examples/" class="md-tabs__link">
+        <a href="../../monitoring-tools/log/" class="md-tabs__link">
           
   
     
@@ -370,19 +376,16 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../shell-scripts/handy-scripts/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../shell-scripts/scripts/" class="md-tabs__link">
+        
   
     
   
   Shell Scripts
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -392,32 +395,23 @@
     
   
   
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
   
     
   
   Ansible
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
     </ul>
   </div>
 </nav>
-    
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -697,70 +691,16 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
         
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     SonarQube
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            SonarQube
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Implementing continuous inspection of code quality
-  </span>
-  
-
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -818,11 +758,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cicd-tools/pipeline-examples/" class="md-nav__link">
+      <a href="../../monitoring-tools/log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Full CI/CD pipeline examples
+    Grafana
   </span>
   
 
@@ -845,125 +785,22 @@
   
   
   
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../shell-scripts/scripts/" class="md-nav__link">
         
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
     Shell Scripts
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Shell Scripts
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../shell-scripts/handy-scripts/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Handy scripts to automate routine tasks
-  </span>
-  
-
       </a>
     </li>
   
 
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
     
       
       
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Ansible
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
-            Ansible
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
   
   
     
@@ -976,23 +813,106 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Automating infrastructure management and provisioning
+    Ansible
   </span>
   
 
       </a>
       
-    </li>
-  
+        
 
-              
-            
-          </ul>
-        </nav>
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2-setting-up-your-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Setting Up Your Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-creating-an-inventory-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Creating an Inventory File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-writing-your-first-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Writing Your First Playbook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exploring-modules-and-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Exploring Modules and Tasks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-learning-yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Learning YAML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-organizing-with-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Organizing with Roles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-hands-on-practice-and-further-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Hands-On Practice and Further Learning
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1013,9 +933,118 @@
                   
 
 
-  <h1>Automating infrastructure management and provisioning</h1>
+  <h1>Ansible</h1>
 
-
+<p><strong>What is Ansible?</strong>
+  - Ansible is an open-source IT automation tool that uses simple YAML files (called playbooks) to define automation tasks.
+  - It’s agentless, meaning you only need SSH access (or WinRM for Windows) to manage remote machines.</p>
+<ul>
+<li><strong>Core Concepts:</strong></li>
+<li><strong>Inventory:</strong> A file listing the machines (hosts) you want to manage.</li>
+<li><strong>Playbooks:</strong> YAML files that define a set of tasks to be executed on your hosts.</li>
+<li><strong>Modules:</strong> Pre-built units of work (like installing packages, managing services, etc.) that Ansible uses to perform tasks.</li>
+<li><strong>Roles:</strong> A way to organize playbooks and related files for reuse and clarity.</li>
+</ul>
+<hr />
+<h3 id="2-setting-up-your-environment">2. <strong>Setting Up Your Environment</strong></h3>
+<ul>
+<li><strong>Installation:</strong></li>
+<li><strong>Using pip (Python package manager):</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>ansible
+</span></code></pre></div></li>
+<li><strong>Using a package manager (for Ubuntu/Debian):</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ansible
+</span></code></pre></div></li>
+<li>
+<p><strong>For macOS:</strong>
+    <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew<span class="w"> </span>install<span class="w"> </span>ansible
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Verify Installation:</strong>
+  <div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ansible<span class="w"> </span>--version
+</span></code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="3-creating-an-inventory-file">3. <strong>Creating an Inventory File</strong></h3>
+<p>An inventory file lists the hosts Ansible will manage. Create a file named <code>hosts.ini</code>:</p>
+<div class="language-ini highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[webservers]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">192.168.1.10</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">192.168.1.11</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">[databases]</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="na">db1.example.com</span>
+</span></code></pre></div>
+<hr />
+<h3 id="4-writing-your-first-playbook">4. <strong>Writing Your First Playbook</strong></h3>
+<p>A playbook is a YAML file that defines what you want to do. Here’s an example playbook that installs Apache on hosts in the <code>webservers</code> group:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nn">---</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Apache on webservers</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webservers</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span><span class="w">  </span><span class="c1"># Elevate privileges if needed (e.g., using sudo)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure Apache is installed</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">      </span><span class="nt">apt</span><span class="p">:</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apache2</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">present</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_os_family == &quot;Debian&quot;</span><span class="w">  </span><span class="c1"># Optional: conditionally run for Debian-based systems</span>
+</span></code></pre></div>
+<p><strong>Run the playbook:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>hosts.ini<span class="w"> </span>playbook.yml
+</span></code></pre></div>
+<hr />
+<h3 id="5-exploring-modules-and-tasks">5. <strong>Exploring Modules and Tasks</strong></h3>
+<ul>
+<li><strong>Modules:</strong> Ansible has hundreds of modules for tasks like file management, package installation, service management, and more.  </li>
+<li>
+<p>Examples: <code>yum</code>, <code>apt</code>, <code>service</code>, <code>copy</code>, <code>template</code>, etc.</p>
+</li>
+<li>
+<p><strong>Tasks:</strong> Each task in a playbook calls a module with specific parameters. Understanding how to structure these tasks is key to writing effective playbooks.</p>
+</li>
+</ul>
+<hr />
+<h3 id="6-learning-yaml">6. <strong>Learning YAML</strong></h3>
+<p>Since Ansible playbooks are written in YAML, familiarize yourself with:
+- <strong>Syntax:</strong> Indentation, key-value pairs, lists, etc.
+- <strong>Best Practices:</strong> Keep files clean and well-commented.</p>
+<p>A good starting resource is the <a href="https://yaml.org/start.html">YAML Tutorial</a>.</p>
+<hr />
+<h3 id="7-organizing-with-roles">7. <strong>Organizing with Roles</strong></h3>
+<p>As your playbooks grow, you might want to use roles to organize your code:
+- <strong>Structure of a Role:</strong>
+  - <code>tasks/</code> – contains main tasks.
+  - <code>handlers/</code> – tasks that run when notified.
+  - <code>templates/</code> – Jinja2 templates for configuration files.
+  - <code>files/</code> – static files to be transferred.
+  - <code>vars/</code> and <code>defaults/</code> – variables for configuration.</p>
+<p>Roles help in reusing and maintaining playbooks more efficiently.</p>
+<hr />
+<h3 id="8-hands-on-practice-and-further-learning">8. <strong>Hands-On Practice and Further Learning</strong></h3>
+<ul>
+<li><strong>Practice Projects:</strong></li>
+<li>Automate the deployment of a web server.</li>
+<li>Set up a database server.</li>
+<li>
+<p>Create a multi-tier application deployment.</p>
+</li>
+<li>
+<p><strong>Documentation &amp; Community:</strong></p>
+</li>
+<li><strong>Official Documentation:</strong> <a href="https://docs.ansible.com/">Ansible Documentation</a></li>
+<li><strong>Community Resources:</strong> Ansible Galaxy (for roles), forums, and GitHub repositories.</li>
+<li>
+<p><strong>Courses &amp; Tutorials:</strong> Look for free online courses, YouTube tutorials, or platforms like Udemy and Pluralsight.</p>
+</li>
+<li>
+<p><strong>Experiment:</strong>  </p>
+</li>
+<li>Use virtual machines or cloud instances (e.g., AWS, Azure) to test your playbooks.</li>
+<li>Try debugging with <code>ansible-playbook --check --diff</code> to see what changes would be made.</li>
+</ul>
+<hr />
 
 
 
@@ -1069,7 +1098,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.expand", "navigation.tabs.sticky", "navigation.indexes", "search.suggest", "search.share", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "announce.dismiss", "content.action.edit", "content.action.view", "content.footnote.tooltips", "content.tooltips", "navigation.search", "navigation.subsections", "content.social.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tracking", "navigation.sections", "navigation.top", "navigation.expand", "navigation.indexes", "search.suggest", "search.share", "search.highlight", "toc.integrate", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "announce.dismiss", "content.action.edit", "content.action.view", "content.footnote.tooltips", "content.tooltips", "navigation.search", "navigation.subsections", "content.social.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

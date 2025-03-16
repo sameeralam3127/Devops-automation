@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/ansible/ansible/</loc>
-         <lastmod>2025-01-18</lastmod>
-    </url>
-    <url>
-         <loc>https://sameeralam3127.github.io/Devops-automation/cicd-tools/pipeline-examples/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/docker/docker/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/jenkins/jenkins/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/kubernetes/kubernetes/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
-         <loc>https://sameeralam3127.github.io/Devops-automation/shell-scripts/handy-scripts/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <loc>https://sameeralam3127.github.io/Devops-automation/monitoring-tools/log/</loc>
+         <lastmod>2025-03-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/shell-scripts/scripts/</loc>
+         <lastmod>2025-03-16</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/sonarqube/sonarqube/</loc>
-         <lastmod>2025-01-18</lastmod>
+         <lastmod>2025-03-16</lastmod>
     </url>
 </urlset>
