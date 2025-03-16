@@ -1,3 +1,12 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBKH2M5SJ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TBKH2M5SJ3');
+</script>
 # Welcome to DevOps Automation
 
 Hi there! 👋 Welcome to **DevOps Automation** – your simple spot for everything **DevOps** and **Site Reliability Engineering (SRE)**. Whether you're an expert or just starting, I'm here to help you learn cool tools, easy tips, and join a friendly community.
