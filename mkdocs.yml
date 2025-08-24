@@ -113,6 +113,12 @@ nav:
       - Grafana: monitoring-tools/log.md
   - Shell Scripts: shell-scripts/scripts.md
   - Ansible: ansible/ansible.md
+  - Blog:
+      - Overview: blog/index.md
+      - Security Hardening: blog/posts/secure_config.md
+      - Ansible Vault: blog/posts/ansible_vault.md
+      - User Management: blog/posts/user_management.md
+      - Active Directory Integration: blog/posts/active_directory.md
 
 extra:
   generator: false
