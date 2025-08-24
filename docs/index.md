@@ -11,9 +11,9 @@ Welcome to **DevOps Automation** – your resource for everything **DevOps** and
 I am **Sameer Alam**, a DevOps engineer and SRE practitioner. My focus is simplifying complex systems and ensuring reliability. Over the years, I have gained insights into what makes systems operate efficiently.
 
 **See my projects:**  
-[My GitHub](https://github.com/sameeralam3127){:target="\_blank"}
+[My GitHub](https://github.com/sameeralam3127){:target="\_blank"}<br>
 [Blog](https://www.computecentral.in/){:target="\_blank"}<br>
 Explore my earlier blog posts from 2016, when I first began documenting my learning.
 For questions or ideas, feel free to reach out.
 
-**– Sameer**
+**– Sameer Alam**

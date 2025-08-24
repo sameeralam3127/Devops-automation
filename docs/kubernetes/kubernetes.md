@@ -1,254 +1,451 @@
-# Kubernetes
-??? info "Mastering Kubernetes: From Introduction to Deploying NGINX"
-    Kubernetes is a powerful open-source platform that automates the management, deployment, and scaling of containerized applications. In this guide, we'll walk you through the basics of Kubernetes, how to set it up with Docker Desktop, use the `kubectl` command-line tool, and deploy an NGINX instance to see how it works.
+# [Kubernetes: From Basics to Advanced]()
 
-    ---
+## Why Container Orchestration and Need for Containers
 
-    ## **What is Kubernetes?**
+Before containers, applications were deployed on physical or virtual machines, which posed challenges:
 
-    Kubernetes, often abbreviated as K8s, is a container orchestration platform designed to simplify the deployment and management of containerized applications. It abstracts away the underlying infrastructure and makes it easier to deploy and scale applications seamlessly.
+- **Dependency Conflicts**: Applications required specific library versions, causing conflicts on shared machines.
+- **Environment Inconsistency**: Differences between development, testing, and production environments led to issues like "it works on my machine."
+- **Resource Inefficiency**: Virtual machines included full operating systems, consuming significant resources.
 
-    Here’s a quick overview of the main concepts in Kubernetes:
-
-    ### **Key Concepts**
-
-    1. **Pod**:
-       - **What It Is**: The smallest and simplest Kubernetes object. A Pod can host one or more containers that share the same network and storage.
-       - **What It Does**: It serves as the environment where your application containers run.
-
-    2. **Deployment**:
-       - **What It Is**: Manages the deployment of Pods. Ensures the desired number of Pods are running and handles updates.
-       - **What It Does**: Helps with scaling and automating the update process for your application.
-
-    3. **Service**:
-       - **What It Is**: A way to expose and access a set of Pods with a stable network address.
-       - **What It Does**: Handles load balancing and makes sure that services can find and communicate with each other reliably.
-
-    4. **ReplicaSet**:
-       - **What It Is**: Ensures that the specified number of Pod replicas are running.
-       - **What It Does**: Helps maintain the availability of your application by scaling Pods when necessary.
-
-    5. **Namespace**:
-       - **What It Is**: Provides a way to divide cluster resources into separate, logical groups.
-       - **What It Does**: Useful for managing different environments (e.g., development, production) within the same cluster.
-
-
-    ## **Setting Up Kubernetes in Docker Desktop**
-
-    Docker Desktop includes a built-in Kubernetes cluster that can be easily configured for local development. Here's how you can set it up:
-
-      1. **Open Docker Desktop**:
-         - Start Docker Desktop from your application menu.
-
-      2. **Go to Settings**:
-         - Click on the gear icon (⚙️) in the top-right corner.
-
-      3. **Select the Kubernetes Tab**:
-         - Click on the "Kubernetes" tab from the sidebar.
-
-      4. **Enable Kubernetes**:
-         - Check the box that says "Enable Kubernetes".
-
-      5. **Apply & Restart**:
-         - Click "Apply & Restart" to apply the changes. Docker Desktop will restart to configure Kubernetes.
-
-      6. **Wait for Setup**:
-         - It may take a few minutes for Kubernetes to start. Docker Desktop will show the status of the Kubernetes setup.
-
-         ??? info "Tip"
-            If you are new to Kubernetes, Docker Desktop is a great way to get started as it provides an easy local environment without needing to set up a full Kubernetes cluster.
+!!! note "How Containers Solve This"
+Containers package applications with their dependencies, ensuring consistency across environments.  
+ They are lightweight, sharing the host OS kernel, unlike virtual machines.
 
 ---
 
-## **What is `kubectl`?**
+## The Rise of Container Orchestration
 
-`kubectl` is the command-line tool for interacting with Kubernetes clusters. It allows you to create, manage, and troubleshoot your Kubernetes resources.
+As container usage scaled, manual management became inefficient. Key needs included:
 
-### **Key Features of `kubectl`**:
-- **Run Commands**: Manage Pods, Deployments, and other resources.
-- **Change Configurations**: Apply YAML files to create or update Kubernetes resources.
-- **Check Status**: View the status of your resources to troubleshoot or monitor your application.
+- Deploying containers across multiple machines.
+- Scaling applications based on demand.
+- Ensuring high availability and handling failures.
+- Managing networking and storage.
 
-### **Common `kubectl` Commands**:
-
-- **Get Resources**:
-  ```bash
-  kubectl get [resource]
-  ```
-  - Lists resources such as Pods, Services, Deployments, etc.
-
-- **Describe Resource**:
-  ```bash
-  kubectl describe [resource] [name]
-  ```
-  - Shows detailed information about a specific resource.
-
-- **Apply Configuration**:
-  ```bash
-  kubectl apply -f [file.yaml]
-  ```
-  - Applies changes from a YAML configuration file.
-
-- **Delete Resource**:
-  ```bash
-  kubectl delete -f [file.yaml]
-  ```
-  - Deletes resources defined in a YAML file.
-
-??? warning "Deleting Resources"
-    Be careful when using the `kubectl delete` command, as it permanently removes resources like Pods and Services from your cluster.
+!!! info "Why Orchestration Tools?"
+Container orchestration tools automate deployment, scaling, and resource management, improving reliability and efficiency.
 
 ---
 
-## **Checking Versions**
+## Why Kubernetes?
 
-### **Check `kubectl` Version**
+Kubernetes, originally developed by Google, became the standard for container orchestration due to:
 
-To check the version of `kubectl`, run the following command:
+- **Scalability**: Manages thousands of containers across clusters.
+- **Portability**: Runs on-premises, in the cloud, or in hybrid setups.
+- **Ecosystem**: Supported by a vast community and toolset.
+- **Flexibility**: Handles diverse workloads, from stateless apps to stateful databases.
+
+!!! tip "Key Features"
+Kubernetes adoption is driven by features like auto-scaling, self-healing, and service discovery.
+
+---
+
+## Understanding OCI and runc
+
+## Open Container Initiative (OCI)
+
+!!! info "OCI Specifications"
+The Open Container Initiative (OCI), under the Linux Foundation, defines standards for container formats and runtimes to ensure interoperability.
+
+- **Container Image Specification**: Defines image structure, layers, and metadata.
+- **Runtime Specification**: Defines how runtimes create and manage containers.
+
+---
+
+## runc
+
+!!! note "About runc"
+runc is a lightweight, CLI-based container runtime implementing the OCI runtime specification.
+
+- Creates containers using Linux namespaces and cgroups.
+- Executes processes in isolated environments.
+- Foundation for higher-level tools like Docker and containerd.
+
+!!! example "Creating a Container with runc (Red Hat and Ubuntu)"
+**1. Install prerequisites**  
+ On **Red Hat**:  
+ `bash
+    sudo yum install -y runc
+    `
+
+    On **Ubuntu/Debian**:
+    ```bash
+    sudo apt-get update
+    sudo apt-get install -y runc
+    ```
+
+    **2. Create root filesystem (using BusyBox for demo)**
+    ```bash
+    mkdir rootfs
+    docker export $(docker create busybox) | tar -C rootfs -xvf -
+    ```
+
+    **3. Generate default config**
+    ```bash
+    runc spec
+    ```
+
+    **4. Start a container**
+    ```bash
+    sudo runc run mycontainer
+    ```
+
+    **5. Install a package inside the container**
+    For **Red Hat-based container**:
+    ```bash
+    yum install -y vim
+    ```
+    For **Ubuntu-based container**:
+    ```bash
+    apt-get update
+    apt-get install -y vim
+    ```
+
+    **6. Check resource usage of the container**
+    From host system:
+    ```bash
+    runc list
+    runc state mycontainer
+    ```
+
+    Using Linux tools:
+    ```bash
+    top
+    htop
+    free -m
+    ```
+
+    This workflow demonstrates creating, running, and managing a container directly with `runc`, without Docker or higher-level tools.
+
+---
+
+## Linux Kernel Features: Namespaces and cgroups
+
+## Namespaces
+
+Namespaces provide isolation for containers, giving each its own:
+
+- **PID Namespace**: Isolated process IDs.
+- **Network Namespace**: Separate network stack.
+- **Mount Namespace**: Isolated filesystem.
+- **User Namespace**: Isolated user and group IDs.
+
+## cgroups (Control Groups)
+
+cgroups control resource usage:
+
+- **CPU**: E.g., 50% of a core.
+- **Memory**: E.g., 1 GB.
+- **I/O**: Disk bandwidth.
+
+!!! summary "Key Takeaway"
+Containers use namespaces for isolation and cgroups for resource control.  
+ Tools like Docker, containerd, and Kubernetes build on these features.
+
+---
+
+## Installing Local Kubernetes Environments
+
+## Minikube
+
+!!! tip "About Minikube"
+Minikube runs a single-node Kubernetes cluster locally, ideal for learning and development.
+
+**Prerequisites**
+
+- CPU: 2+ CPUs
+- Memory: 2 GB (4 GB recommended)
+- Disk Space: 20 GB free
+- OS: Linux, macOS, or Windows
+- Virtualization: VT-x/AMD-V
+- Tools: Docker or hypervisor (VirtualBox, Hyper-V), kubectl
+
+**Installation Steps**
 
 ```bash
-kubectl version --client
+# Linux: Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+
+# macOS
+brew install kubectl
 ```
 
-For both the client and server versions of Kubernetes, use:
+For Windows, download from [https://dl.k8s.io/release/stable.txt](https://dl.k8s.io/release/stable.txt) and add to PATH.
 
 ```bash
-kubectl version
+# Install Minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+# macOS
+brew install minikube
+```
+
+For Windows, download from [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/).
+
+```bash
+# Start and Verify
+minikube start --driver=docker
+kubectl get nodes
+```
+
+Access dashboard:
+
+```bash
+minikube dashboard
+```
+
+!!! note "Usage Notes"
+Minikube is for development only.
+Use `minikube stop` or `minikube delete` for cleanup.
+
+---
+
+## Rancher Desktop
+
+!!! info "About Rancher Desktop"
+Rancher Desktop provides a lightweight Kubernetes cluster (k3s) with a GUI.
+
+**Prerequisites**
+
+- CPU: 4+ CPUs
+- Memory: 8 GB
+- OS: Linux, macOS, or Windows
+- Virtualization: QEMU (Linux/macOS), WSL2 (Windows)
+
+**Steps**
+
+1. Download from [rancherdesktop.io](https://rancherdesktop.io/).
+
+   ```bash
+   sudo apt install ./rancher-desktop-<version>.deb
+   ```
+
+2. Enable Kubernetes in _Preferences > Kubernetes_.
+3. Choose runtime: containerd or dockerd.
+4. Verify with:
+
+   ```bash
+   kubectl get namespaces
+   ```
+
+!!! note "Highlights"
+\- Uses k3s for efficiency.
+\- Supports containerd and dockerd.
+
+---
+
+## Docker Desktop
+
+!!! info "About Docker Desktop"
+Docker Desktop integrates Kubernetes for local clusters.
+
+**Prerequisites**
+
+- OS: Windows 10/11 (Pro/Enterprise), macOS
+- Virtualization: WSL2 (Windows), HyperKit (macOS)
+- Memory: 4 GB (8 GB recommended)
+
+**Steps**
+
+1. Download from [docker.com](https://www.docker.com/products/docker-desktop/) and install.
+2. Enable Kubernetes: _Settings > Kubernetes > Enable Kubernetes_.
+3. Verify:
+
+   ```bash
+   kubectl cluster-info
+   ```
+
+4. Deploy Kubernetes Dashboard:
+
+   ```bash
+   kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+   kubectl proxy
+   ```
+
+   Access at: [http://localhost:8001](http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/)
+
+!!! note "Usage Notes"
+\- May require a paid license for large organizations.
+\- Uses containerd as runtime.
+
+---
+
+## Hands-On with Online Kubernetes Tools
+
+- **Katacoda**: Free browser-based labs ([https://www.katacoda.com/courses/kubernetes](https://www.katacoda.com/courses/kubernetes)).
+- **Play with Kubernetes**: Temporary clusters ([https://labs.play-with-k8s.com/](https://labs.play-with-k8s.com/)).
+
+---
+
+## Cloud-Based Kubernetes Services
+
+## AWS Elastic Kubernetes Service (EKS)
+
+!!! info "About EKS"
+A managed Kubernetes service integrated with AWS.
+
+**Setup**
+
+```bash
+# Configure AWS CLI
+aws configure
+
+# Install eksctl
+curl --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+
+# Create cluster
+eksctl create cluster --name my-cluster --region us-west-2 --nodegroup-name my-nodes --node-type t3.medium --nodes 2
+
+# Verify
+kubectl get nodes
+```
+
+!!! note "Features"
+\- Integrates with AWS services (ELB, IAM, CloudWatch).
+\- Supports auto-scaling and HA.
+
+---
+
+## Red Hat OpenShift
+
+!!! info "About OpenShift"
+Kubernetes-based platform with developer tools.
+
+**Setup**
+
+- Use [Red Hat Developer Sandbox](https://developers.redhat.com/developer-sandbox).
+
+**Features**
+
+- CI/CD pipelines.
+- Developer UI and CLI (`oc`).
+- Enhanced security.
+
+---
+
+## Other Providers
+
+- **Google Kubernetes Engine (GKE)**: GCP integration.
+- **Azure Kubernetes Service (AKS)**: Part of Azure ecosystem.
+- **IBM Cloud Kubernetes Service**: Security-focused.
+
+---
+
+## Example: Running a Container with containerd
+
+```bash
+sudo yum install -y containerd
+sudo systemctl start containerd
+sudo systemctl enable containerd
+
+# Configure
+sudo mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml
+sudo systemctl restart containerd
+
+# Pull and run Alpine
+sudo ctr image pull docker.io/library/alpine:latest
+export CTR_NAMESPACE=my-ns
+sudo ctr --namespace $CTR_NAMESPACE run -t --rm docker.io/library/alpine:latest my-container sh
+
+# List namespaces
+sudo ctr namespaces list
 ```
 
 ---
 
-## **Deploying NGINX Instances**
+## Advanced Kubernetes Concepts
 
-Now, let’s walk through deploying multiple NGINX instances on your Kubernetes cluster.
+## Deployments and Services
 
-### **Step 1: Create a Deployment**
+```bash
+kubectl create deployment my-app --image=nginx:latest --replicas=3
+kubectl expose deployment my-app --type=NodePort --port=80
+```
 
-1. **Open Terminal**:
-   - Use your terminal or command prompt.
+## Ingress
 
-2. **Create Deployment YAML File**:
-   - Save the following YAML definition to a file named `nginx-deployment.yaml`:
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+    - host: myapp.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: my-app
+                port:
+                  number: 80
+```
 
-   ```yaml
-   apiVersion: apps/v1
-   kind: Deployment
-   metadata:
-     name: nginx-deployment
-   spec:
-     replicas: 3
-     selector:
-       matchLabels:
-         app: nginx
-     template:
-       metadata:
-         labels:
-           app: nginx
-       spec:
-         containers:
-         - name: nginx
-           image: nginx:latest
-           ports:
-           - containerPort: 80
-   ```
+## ConfigMaps and Secrets
 
-   - **What It Does**: Defines a Deployment with 3 replicas of NGINX.
+```bash
+kubectl create configmap my-config --from-literal=key1=value1
+kubectl create secret generic my-secret --from-literal=password=secure123
+```
 
-3. **Apply the Deployment**:
-   - Run:
+## Persistent Volumes (PV) and Persistent Volume Claims (PVC)
 
-   ```bash
-   kubectl apply -f nginx-deployment.yaml
-   ```
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-pv
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/data
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+```
 
-### **Step 2: Expose the Deployment**
+## Helm Charts
 
-1. **Create Service YAML File**:
-   - Save the following YAML to `nginx-service.yaml`:
+```bash
+# Install Helm
+curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-   ```yaml
-   apiVersion: v1
-   kind: Service
-   metadata:
-     name: nginx-service
-   spec:
-     selector:
-       app: nginx
-     ports:
-       - protocol: TCP
-         port: 80
-         targetPort: 80
-     type: LoadBalancer
-   ```
-
-   - **What It Does**: Creates a Service to expose the NGINX Deployment.
-
-2. **Apply the Service**:
-   - Run:
-
-   ```bash
-   kubectl apply -f nginx-service.yaml
-   ```
-
-3. **Access NGINX in Browser**:
-   - Open a web browser and navigate to:
-
-   ```bash
-   http://127.0.0.1/
-   ```
+# Deploy a chart
+helm install my-release nginx-stable/nginx-ingress
+```
 
 ---
 
-### **Step 3: Check the Status**
+## Conclusion
 
-1. **List Pods**:
-   - Check the status of the Pods:
+Kubernetes enables scalable, portable container orchestration.
+Local tools like Minikube, Rancher Desktop, and Docker Desktop are great for learning, while AWS EKS and OpenShift provide production-grade solutions.
 
-   ```bash
-   kubectl get pods
-   ```
+By leveraging Linux namespaces, cgroups, containerd, and Helm, Kubernetes simplifies cloud-native application development.
 
-2. **Check Deployment**:
-   - Verify the deployment:
+**Further Learning**
 
-   ```bash
-   kubectl get deployments
-   ```
-
-3. **Check Service**:
-   - View the status of the Service:
-
-   ```bash
-   kubectl get services
-   ```
-
-   - **Note**: Docker Desktop includes a Kubernetes dashboard, which provides a visual view of your resources.
-
----
-
-### **Step 4: Clean Up**
-
-1. **Delete the Service**:
-   - To remove the Service:
-
-   ```bash
-   kubectl delete -f nginx-service.yaml
-   ```
-
-2. **Delete the Deployment**:
-   - To remove the Deployment:
-
-   ```bash
-   kubectl delete -f nginx-deployment.yaml
-   ```
-
-3. **Verify Deletion**:
-   - Ensure that the Pods and Services have been removed:
-
-   ```bash
-   kubectl get pods
-   kubectl get services
-   ```
-
----
-
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+- [Rancher Desktop](https://rancherdesktop.io/)
+- [AWS EKS](https://aws.amazon.com/eks/)
+- [OpenShift Sandbox](https://developers.redhat.com/developer-sandbox)
