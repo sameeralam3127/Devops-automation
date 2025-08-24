@@ -2,34 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/ansible/ansible/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/2018/02/04/active-directory-domain-service-ad-ds/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/2024/04/11/securing-secrets-with-ansible-vault/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/2023/03/17/why-security-hardening-is-important/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/2025/08/24/password-and-system-hardening-best-practices/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/2017/12/25/windows-10-shortcut-commands/</loc>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/docker/docker/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/jenkins/jenkins/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/kubernetes/kubernetes/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/monitoring-tools/log/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/shell-scripts/scripts/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
     </url>
     <url>
          <loc>https://sameeralam3127.github.io/Devops-automation/sonarqube/sonarqube/</loc>
-         <lastmod>2025-03-16</lastmod>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/archive/2025/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/archive/2024/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/archive/2023/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/archive/2018/</loc>
+         <lastmod>2025-08-24</lastmod>
+    </url>
+    <url>
+         <loc>https://sameeralam3127.github.io/Devops-automation/blog/archive/2017/</loc>
+         <lastmod>2025-08-24</lastmod>
     </url>
 </urlset>
