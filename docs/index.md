@@ -1,50 +1,19 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TBKH2M5SJ3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+# [Welcome to DevOps Automation]()
 
-  gtag('config', 'G-TBKH2M5SJ3');
-</script>
-# Welcome to DevOps Automation
+Welcome to **DevOps Automation** – your resource for everything **DevOps** and **Site Reliability Engineering (SRE)**. Whether you are experienced or just starting, this site will help you explore tools, practical tips, and connect with a professional community.
 
-Hi there! 👋 Welcome to **DevOps Automation** – your simple spot for everything **DevOps** and **Site Reliability Engineering (SRE)**. Whether you're an expert or just starting, I'm here to help you learn cool tools, easy tips, and join a friendly community.
+!!! tip "Practical advice to help you deliver and manage code effectively."
 
-!!! tip "DevOps Tips 🎯"
-    Get simple advice to help you connect and deliver code smoothly.
+!!! info "Discover the latest tools and approaches to keep your systems reliable and secure."
 
-!!! info "SRE Tools and Insights 🔧"
-    Discover the latest tools and ideas to keep your systems safe and running well.
+!!! note "Step-by-step guides for setup, deployment, and system improvement."
 
-!!! note "Hands-On Tutorials 📘"
-    Follow easy, step-by-step guides to set up, deploy, and improve your systems like a pro.
+I am **Sameer Alam**, a DevOps engineer and SRE practitioner. My focus is simplifying complex systems and ensuring reliability. Over the years, I have gained insights into what makes systems operate efficiently.
 
-!!! warning "Community Forums 🌐"
-    Join our welcoming community! Share your stories, solve problems, and find great resources in the world of DevOps and SRE.
+**See my projects:**  
+[My GitHub](https://github.com/sameeralam3127){:target="\_blank"}
+[Blog](https://www.computecentral.in/){:target="\_blank"}<br>
+Explore my earlier blog posts from 2016, when I first began documenting my learning.
+For questions or ideas, feel free to reach out.
 
----
-
-## 👨‍💻 About Me
-
-I'm **Sameer Alam**, a DevOps engineer and SRE fan. I love making complex systems simple and smooth. Over the years, I've learned a lot about what makes systems work.
-
-🔗 **See my projects:**  
-[My GitHub](https://github.com/sameeralam3127){:target="_blank"}
-
----
-
-## 📚 My Learning Journey
-
-Check out my old blog posts from 2016, when I first started on Blogger.
-
-🔗 [Old Blog](https://www.computecentral.in/){:target="_blank"}
-
----
-
-## 📩 Let's Connect!
-
-Have a question or idea? Feel free to reach out.
-
-Happy learning and building! 🚀  
 **– Sameer**

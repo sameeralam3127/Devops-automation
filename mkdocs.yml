@@ -1,5 +1,5 @@
 # Project information
-site_name: Devops Automation 
+site_name: Devops Automation
 site_url: https://sameeralam3127.github.io/Devops-automation/
 site_author: Sameer Alam
 docs_dir: docs
@@ -22,8 +22,8 @@ theme:
       danger: simple/redhat
       bug: fontawesome/solid/robot
       example: simple/ubuntu
-      quote: fontawesome/solid/quote-left 
-  
+      quote: fontawesome/solid/quote-left
+
   features:
     - navigation.instant # Single page instant refresh
     - navigation.tabs # Navigation tabs across top
@@ -58,7 +58,7 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: light-blue
+      primary: light
       accent: black
       toggle:
         icon: material/toggle-switch
@@ -104,7 +104,7 @@ nav:
   - Docker:
       - Containerization techniques: docker/docker.md
   - Kubernetes:
-      - Kubernetes clusters: kubernetes/kubernetes.md    
+      - Kubernetes clusters: kubernetes/kubernetes.md
   - Jenkins:
       - Automating CI/CD pipelines with Jenkins: jenkins/jenkins.md
   - SonarQube: sonarqube/sonarqube.md
