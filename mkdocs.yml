@@ -119,6 +119,7 @@ nav:
       - Ansible Vault: blog/posts/ansible_vault.md
       - User Management: blog/posts/user_management.md
       - Active Directory Integration: blog/posts/active_directory.md
+      - Windows 10 Shortcuts: blog/posts/windows_10_shortcuts.md
 
 extra:
   generator: false
