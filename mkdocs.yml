@@ -113,6 +113,7 @@ nav:
       - Grafana: monitoring-tools/log.md
   - Shell Scripts: shell-scripts/scripts.md
   - Ansible: ansible/ansible.md
+  - Terraform: terraform/overview.md
   - Blog:
       - Overview: blog/index.md
       - Security Hardening: blog/posts/secure_config.md

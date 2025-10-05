@@ -10,13 +10,13 @@
         <meta name="author" content="Sameer Alam">
       
       
-        <link rel="canonical" href="https://sameeralam3127.github.io/Devops-automation/sonarqube/sonarqube/">
+        <link rel="canonical" href="https://sameeralam3127.github.io/Devops-automation/terraform/overview/">
       
       
-        <link rel="prev" href="../../jenkins/jenkins/">
+        <link rel="prev" href="../../ansible/ansible/">
       
       
-        <link rel="next" href="../../monitoring-tools/log/">
+        <link rel="next" href="../../blog/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>SonarQube - Devops Automation</title>
+        <title>Terraform - Devops Automation</title>
       
     
     
@@ -143,7 +143,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sonarqube-installation-configuration-and-integration-with-jenkins" class="md-skip">
+        <a href="#why-terraform" class="md-skip">
           Skip to content
         </a>
       
@@ -177,7 +177,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SonarQube
+              Terraform
             
           </span>
         </div>
@@ -376,11 +376,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../sonarqube/sonarqube/" class="md-tabs__link">
         
   
   
@@ -457,9 +455,11 @@
   
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../../terraform/overview/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
   
@@ -792,32 +792,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    SonarQube
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../sonarqube/sonarqube/" class="md-nav__link">
         
   
   
@@ -828,179 +806,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-sonarqube" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is SonarQube?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-installing-sonarqube-on-ubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Installing SonarQube on Ubuntu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-install-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 Install Dependencies
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-download-and-install-sonarqube" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.3 Download and Install SonarQube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14-configure-sonarqube" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.4 Configure SonarQube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-start-sonarqube" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.5 Start SonarQube
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-installing-the-sonarqube-plugin-for-jenkins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Installing the SonarQube Plugin for Jenkins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#21-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 Install the Plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-configuring-sonarqube-in-jenkins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Configuring SonarQube in Jenkins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#31-configure-sonarqube-server-in-jenkins" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Configure SonarQube Server in Jenkins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#32-install-the-sonarqube-scanner-in-jenkins" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Install the SonarQube Scanner in Jenkins
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-create-a-jenkins-pipeline-to-run-sonarqube-analysis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Create a Jenkins Pipeline to Run SonarQube Analysis
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#41-create-a-new-jenkins-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.1 Create a New Jenkins Pipeline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#42-define-the-pipeline-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.2 Define the Pipeline Script
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#43-run-the-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      4.3 Run the Pipeline
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-5-view-sonarqube-analysis-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 5: View SonarQube Analysis Results
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1132,10 +937,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../terraform/overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Terraform
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1146,6 +971,309 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-terraform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Terraform
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-terraform-communicates-with-cloud-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      How Terraform Communicates with Cloud Providers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-cli-installation-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS CLI Installation &amp; Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS CLI Installation &amp; Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install AWS CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-aws-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure AWS CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-test-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Test Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-optional-custom-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Optional: Custom Profiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localstack-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalStack Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LocalStack Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-localstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Use LocalStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Prerequisites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-localstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Install LocalStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-start-localstack" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Start LocalStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-web-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Web Dashboard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Test
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-docker-compose-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Docker Compose Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terraform-localstack-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terraform + LocalStack Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terraform + LocalStack Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-a-test-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create a Test File
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-providertf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: provider.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-maintf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: main.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-outputstf" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: outputs.tf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Deploy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cleanup-and-destroy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cleanup and Destroy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cleanup and Destroy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destroy-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destroy Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-preview-destroy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional: Preview Destroy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-deletion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verify Deletion
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-localstack-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset LocalStack (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1550,155 +1678,271 @@
 
 
 
-<h1 id="sonarqube-installation-configuration-and-integration-with-jenkins">SonarQube Installation, Configuration, and Integration with Jenkins</h1>
-<details class="info">
-<summary>Mastering SonarQube: Installation, Configuration, and Jenkins Integration</summary>
-</details>
-<p>SonarQube is an open-source platform that provides continuous inspection of code quality. It performs automatic reviews to detect bugs, vulnerabilities, and code smells in your codebase. This guide will walk you through installing SonarQube on Ubuntu, configuring it, and integrating it with Jenkins to enhance your continuous integration and continuous delivery (CI/CD) pipeline.</p>
-<hr />
-<h2 id="what-is-sonarqube"><strong>What is SonarQube?</strong></h2>
-<p>SonarQube is a powerful tool for continuous code quality inspection. It helps developers identify and fix issues early in the development lifecycle, ensuring that their code is secure, maintainable, and efficient. SonarQube can analyze code in various programming languages, providing feedback on code quality metrics such as bugs, vulnerabilities, code smells, duplications, and test coverage.</p>
-<hr />
-<h2 id="step-1-installing-sonarqube-on-ubuntu"><strong>Step 1: Installing SonarQube on Ubuntu</strong></h2>
-<h2 id="11-prerequisites"><strong>1.1 Prerequisites</strong></h2>
-<p>Before installing SonarQube, ensure that you have Java (JDK 11 or newer) installed. If not, install it using the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openjdk-11-jdk<span class="w"> </span>-y
-</span></code></pre></div>
-<p>Verify the Java installation:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java<span class="w"> </span>-version
-</span></code></pre></div>
-<h2 id="12-install-dependencies"><strong>1.2 Install Dependencies</strong></h2>
-<p>SonarQube requires PostgreSQL as its database backend. To install PostgreSQL:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>postgresql<span class="w"> </span>postgresql-contrib<span class="w"> </span>-y
-</span></code></pre></div>
-<p>After installation, create a new database and user for SonarQube:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>-u<span class="w"> </span>postgres<span class="w"> </span>psql
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>CREATE<span class="w"> </span>USER<span class="w"> </span>sonar<span class="w"> </span>WITH<span class="w"> </span>PASSWORD<span class="w"> </span><span class="s1">&#39;sonar&#39;</span><span class="p">;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>sonar<span class="p">;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>DATABASE<span class="w"> </span>sonar<span class="w"> </span>TO<span class="w"> </span>sonar<span class="p">;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="se">\q</span>
-</span></code></pre></div>
-<h2 id="13-download-and-install-sonarqube"><strong>1.3 Download and Install SonarQube</strong></h2>
-<p>Now, download the latest version of SonarQube from the official website:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>wget<span class="w"> </span>https://binaries.sonarsource.com/CommercialEdition/sonarqube-9.3.0.51899.zip
-</span></code></pre></div>
-<p>Unzip the downloaded file:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>unzip<span class="w"> </span>sonarqube-9.3.0.51899.zip
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sudo<span class="w"> </span>mv<span class="w"> </span>sonarqube-9.3.0.51899<span class="w"> </span>/opt/sonarqube
-</span></code></pre></div>
-<h2 id="14-configure-sonarqube"><strong>1.4 Configure SonarQube</strong></h2>
-<p>Navigate to the SonarQube configuration file:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/sonarqube/conf
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>nano<span class="w"> </span>sonar.properties
-</span></code></pre></div>
-<p>Edit the following properties to set up your PostgreSQL database:</p>
-<div class="language-properties highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="na">sonar.jdbc.url</span><span class="o">=</span><span class="s">jdbc:postgresql://localhost/sonar</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="na">sonar.jdbc.username</span><span class="o">=</span><span class="s">sonar</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="na">sonar.jdbc.password</span><span class="o">=</span><span class="s">sonar</span>
-</span></code></pre></div>
-<h2 id="15-start-sonarqube"><strong>1.5 Start SonarQube</strong></h2>
-<p>SonarQube is bundled with a script to start the application. You can start SonarQube using the following commands:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/sonarqube/bin/linux-x86-64
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>./sonar.sh<span class="w"> </span>start
-</span></code></pre></div>
-<p>You can verify that SonarQube is running by visiting:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>http://localhost:9000
-</span></code></pre></div>
-<p>The default login credentials are:</p>
+  <h1>Terraform</h1>
+
+<p>Terraform is an Infrastructure as Code (IaC) tool by HashiCorp that allows you to define, provision, and manage infrastructure across cloud providers using declarative configuration files.</p>
+<h3 id="why-terraform">Why Terraform</h3>
 <ul>
-<li><strong>Username</strong>: admin</li>
-<li><strong>Password</strong>: admin</li>
+<li>Ideal for creating and managing infrastructure.</li>
+<li>Uses <strong>HCL (HashiCorp Configuration Language)</strong> — a human-readable, declarative language.</li>
+</ul>
+<h3 id="example">Example</h3>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;example&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">ami</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ami-0abcd1234&quot;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">instance_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t2.micro&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="how-terraform-communicates-with-cloud-providers">How Terraform Communicates with Cloud Providers</h3>
+<ol>
+<li>
+<p><strong>Providers (Plugins)</strong>
+   Terraform uses provider plugins to communicate with clouds.</p>
+</li>
+<li>
+<p><code>hashicorp/aws</code> for AWS</p>
+</li>
+<li><code>hashicorp/azurerm</code> for Azure</li>
+<li>
+<p><code>hashicorp/google</code> for GCP</p>
+</li>
+<li>
+<p><strong>APIs</strong>
+   Each provider calls the official cloud API (REST or SDK) to create resources.</p>
+</li>
+<li>
+<p><strong>Authentication</strong>
+   Terraform needs credentials to access APIs:</p>
+</li>
+</ol>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;aws&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="na">access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;YOUR_ACCESS_KEY&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="na">secret_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;YOUR_SECRET_KEY&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="na">region</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<ol>
+<li>
+<p><strong>Terraform Workflow</strong></p>
+</li>
+<li>
+<p><code>init</code> → Download providers</p>
+</li>
+<li><code>plan</code> → Preview changes</li>
+<li><code>apply</code> → Create or modify resources</li>
+<li><code>state</code> → Save results locally or remotely</li>
+</ol>
+<h3 id="example-flow">Example Flow</h3>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_s3_bucket&quot;</span><span class="w"> </span><span class="nv">&quot;demo&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-demo-bucket&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Terraform uses the AWS provider to authenticate, send an API call, and record the result in <code>terraform.tfstate</code>.</p>
+<p><strong>Summary:</strong>
+Terraform communicates through provider plugins that use official cloud APIs to create and manage resources.</p>
+<hr />
+<h2 id="aws-cli-installation-configuration">AWS CLI Installation &amp; Configuration</h2>
+<h3 id="1-install-aws-cli">1. Install AWS CLI</h3>
+<p><strong>macOS</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>brew<span class="w"> </span>install<span class="w"> </span>awscli
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>aws<span class="w"> </span>--version
+</span></code></pre></div>
+<p><strong>Windows</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>choco<span class="w"> </span>install<span class="w"> </span>awscli
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>aws<span class="w"> </span>--version
+</span></code></pre></div>
+<p>Manual installers are available at:
+<a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html</a></p>
+<hr />
+<h3 id="2-configure-aws-cli">2. Configure AWS CLI</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>aws<span class="w"> </span>configure
+</span></code></pre></div>
+<p>Enter:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>AWS Access Key ID [None]: test
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>AWS Secret Access Key [None]: test
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Default region name [None]: us-east-1
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Default output format [None]: json
+</span></code></pre></div>
+<p>Configuration files:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>~/.aws/credentials
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>~/.aws/config
+</span></code></pre></div>
+<p><strong>Windows path:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>C:\Users\&lt;username&gt;\.aws\
+</span></code></pre></div>
+<hr />
+<h3 id="3-test-configuration">3. Test Configuration</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>aws<span class="w"> </span>s3<span class="w"> </span>ls
+</span></code></pre></div>
+<p><strong>With LocalStack:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>aws<span class="w"> </span>--endpoint-url<span class="o">=</span>http://localhost:4566<span class="w"> </span>s3<span class="w"> </span>ls
+</span></code></pre></div>
+<hr />
+<h3 id="4-optional-custom-profiles">4. Optional: Custom Profiles</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>aws<span class="w"> </span>configure<span class="w"> </span>--profile<span class="w"> </span>localstack
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>aws<span class="w"> </span>--profile<span class="w"> </span>localstack<span class="w"> </span>--endpoint-url<span class="o">=</span>http://localhost:4566<span class="w"> </span>s3<span class="w"> </span>ls
+</span></code></pre></div>
+<hr />
+<h2 id="localstack-setup">LocalStack Setup</h2>
+<p>LocalStack emulates AWS services locally using Docker — perfect for testing Terraform and AWS CLI without real AWS credentials.</p>
+<h3 id="why-use-localstack">Why Use LocalStack</h3>
+<ul>
+<li>Avoid AWS costs</li>
+<li>Work offline</li>
+<li>Fast and safe testing</li>
+<li>Supports S3, EC2, Lambda, DynamoDB, and more</li>
 </ul>
 <hr />
-<h2 id="step-2-installing-the-sonarqube-plugin-for-jenkins"><strong>Step 2: Installing the SonarQube Plugin for Jenkins</strong></h2>
-<p>To integrate SonarQube with Jenkins, you need to install the <strong>SonarQube Scanner for Jenkins</strong> plugin.</p>
-<h2 id="21-install-the-plugin"><strong>2.1 Install the Plugin</strong></h2>
-<ol>
-<li>Open Jenkins in your browser (<code>http://localhost:8080</code>).</li>
-<li>Navigate to <strong>Manage Jenkins</strong> &gt; <strong>Manage Plugins</strong>.</li>
-<li>Search for <strong>SonarQube Scanner</strong> in the <strong>Available</strong> tab and install it.</li>
-</ol>
+<h3 id="1-prerequisites">1. Prerequisites</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>macOS Install Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Docker Desktop</td>
+<td>Runs containers</td>
+<td><code>brew install --cask docker</code></td>
+</tr>
+<tr>
+<td>Python 3.8+</td>
+<td>Required for CLI</td>
+<td>Preinstalled</td>
+</tr>
+<tr>
+<td>pip</td>
+<td>Python package manager</td>
+<td><code>python3 -m ensurepip --upgrade</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
-<h2 id="step-3-configuring-sonarqube-in-jenkins"><strong>Step 3: Configuring SonarQube in Jenkins</strong></h2>
-<h2 id="31-configure-sonarqube-server-in-jenkins"><strong>3.1 Configure SonarQube Server in Jenkins</strong></h2>
-<ol>
-<li>Go to <strong>Manage Jenkins</strong> &gt; <strong>Configure System</strong>.</li>
-<li>Scroll down to the <strong>SonarQube Servers</strong> section.</li>
-<li>Click <strong>Add SonarQube</strong> and enter the following details:</li>
-<li><strong>Name</strong>: SonarQube (or any name you prefer)</li>
-<li><strong>Server URL</strong>: <code>http://localhost:9000</code></li>
-<li><strong>Authentication Token</strong>: To generate an authentication token, log in to SonarQube and go to <strong>My Account</strong> &gt; <strong>Security</strong> &gt; <strong>Generate Tokens</strong>.</li>
-</ol>
-<h2 id="32-install-the-sonarqube-scanner-in-jenkins"><strong>3.2 Install the SonarQube Scanner in Jenkins</strong></h2>
-<ol>
-<li>In the <strong>SonarQube Scanner</strong> section, click <strong>Add SonarQube Scanner</strong>.</li>
-<li>Enter the <strong>Installation Name</strong> (e.g., SonarQube Scanner) and set the <strong>Version</strong>.</li>
-</ol>
-<p>Jenkins will automatically detect the SonarQube Scanner when the plugin is installed.</p>
-<hr />
-<h2 id="step-4-create-a-jenkins-pipeline-to-run-sonarqube-analysis"><strong>Step 4: Create a Jenkins Pipeline to Run SonarQube Analysis</strong></h2>
-<h2 id="41-create-a-new-jenkins-pipeline"><strong>4.1 Create a New Jenkins Pipeline</strong></h2>
-<ol>
-<li>From the Jenkins dashboard, click on <strong>New Item</strong>.</li>
-<li>Choose <strong>Pipeline</strong> and give it a name (e.g., <strong>SonarQube-Pipeline</strong>).</li>
-<li>Click <strong>OK</strong>.</li>
-</ol>
-<h2 id="42-define-the-pipeline-script"><strong>4.2 Define the Pipeline Script</strong></h2>
-<p>Add the following script in the <strong>Pipeline</strong> section. This pipeline will perform a SonarQube analysis on your project:</p>
-<div class="language-groovy highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">pipeline</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="n">agent</span><span class="w"> </span><span class="n">any</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">environment</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="n">SONARQUBE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SonarQube&#39;</span><span class="w">  </span><span class="c1">// The name of the SonarQube server configured in Jenkins</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">stages</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Checkout&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">                </span><span class="n">git</span><span class="w"> </span><span class="s1">&#39;https://github.com/your-repository-url.git&#39;</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">            </span><span class="o">}</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;SonarQube Analysis&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                </span><span class="n">script</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                    </span><span class="c1">// Run the SonarQube scanner</span>
-</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                    </span><span class="n">sh</span><span class="w"> </span><span class="s2">&quot;sonar-scanner&quot;</span>
-</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                </span><span class="o">}</span>
-</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">            </span><span class="o">}</span>
-</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">        </span><span class="n">stage</span><span class="o">(</span><span class="s1">&#39;Build&#39;</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">            </span><span class="n">steps</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">                </span><span class="c1">// Build your project (e.g., using Maven, Gradle, etc.)</span>
-</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">                </span><span class="n">sh</span><span class="w"> </span><span class="s1">&#39;mvn clean install&#39;</span>
-</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">            </span><span class="o">}</span>
-</span><span id="__span-10-25"><a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">        </span><span class="o">}</span>
-</span><span id="__span-10-26"><a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="w">    </span><span class="o">}</span>
-</span><span id="__span-10-27"><a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="o">}</span>
+<h3 id="2-install-localstack">2. Install LocalStack</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span>localstack<span class="w"> </span>awscli-local
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>localstack<span class="w"> </span>--version
 </span></code></pre></div>
-<h2 id="43-run-the-pipeline"><strong>4.3 Run the Pipeline</strong></h2>
-<p>Save the pipeline and click <strong>Build Now</strong>. Jenkins will execute the pipeline, run the SonarQube analysis, and publish the results to SonarQube.</p>
 <hr />
-<h2 id="step-5-view-sonarqube-analysis-results"><strong>Step 5: View SonarQube Analysis Results</strong></h2>
-<p>After the pipeline runs, you can view the results by logging into the SonarQube dashboard at:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>http://localhost:9000
+<h3 id="3-start-localstack">3. Start LocalStack</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>localstack<span class="w"> </span>start
 </span></code></pre></div>
-<p>Here, you’ll see detailed code quality metrics, including:</p>
-<ul>
-<li>Code coverage</li>
-<li>Code duplication</li>
-<li>Code smells</li>
-<li>Vulnerabilities</li>
-<li>Bugs</li>
-</ul>
+<p>Runs on <code>http://localhost:4566</code>.</p>
 <hr />
-<p>By following these steps, you’ve successfully installed SonarQube, configured it, and integrated it with Jenkins to perform continuous code quality analysis. With SonarQube integrated into your Jenkins pipeline, you can automatically monitor code quality, identify issues early, and maintain high-quality code throughout your development lifecycle.</p>
+<h3 id="4-web-dashboard">4. Web Dashboard</h3>
+<p><img alt="alt text" src="../Screenshot%202025-10-05%20at%208.22.20%E2%80%AFPM.png" />
+<img alt="alt text" src="../Screenshot%202025-10-05%20at%208.23.33%E2%80%AFPM.png" /></p>
 <hr />
-<p>?? info "Tip"
-For better code quality enforcement, integrate SonarQube with Jenkins' automated build and testing process to prevent merging code that does not meet your quality standards.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>## Key Features:
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>1. **SonarQube Setup**: The guide walks users through installing and configuring SonarQube on Ubuntu with PostgreSQL as the database backend.
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>2. **Jenkins Integration**: Instructions on integrating SonarQube with Jenkins via the SonarQube Scanner plugin.
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>3. **Pipeline Example**: A Jenkins pipeline example that runs SonarQube analysis as part of the build process.
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>4. **User-Friendly Navigation**: This guide is broken down into easy-to-follow steps with detailed explanations for each phase.
+<h3 id="5-test">5. Test</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>awslocal<span class="w"> </span>s3<span class="w"> </span>ls
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>awslocal<span class="w"> </span>s3<span class="w"> </span>mb<span class="w"> </span>s3://demo-bucket
+</span></code></pre></div>
+<hr />
+<h3 id="6-docker-compose-example">6. Docker Compose Example</h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.8&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nt">services</span><span class="p">:</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="nt">localstack</span><span class="p">:</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localstack/localstack</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;4566:4566&quot;</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SERVICES=s3,ec2,lambda</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DEBUG=1</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;./localstack:/var/lib/localstack&quot;</span>
+</span></code></pre></div>
+<p>Run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker-compose<span class="w"> </span>up
+</span></code></pre></div>
+<hr />
+<h2 id="terraform-localstack-integration">Terraform + LocalStack Integration</h2>
+<h3 id="project-structure">Project Structure</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>terraform-localstack-demo/
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>├── main.tf
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>├── provider.tf
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>├── outputs.tf
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>└── hello.txt
+</span></code></pre></div>
+<h3 id="step-1-create-a-test-file">Step 1: Create a Test File</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello from Terraform + LocalStack!&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>hello.txt
+</span></code></pre></div>
+<hr />
+<h3 id="step-2-providertf">Step 2: provider.tf</h3>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nb">terraform</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nb">required_providers</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nb">aws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">      </span><span class="na">source</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hashicorp/aws&quot;</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">      </span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;~&gt; 5.0&quot;</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">  </span><span class="na">required_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&gt;= 1.5.0&quot;</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="p">}</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kr">provider</span><span class="w"> </span><span class="nv">&quot;aws&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">  </span><span class="na">region</span><span class="w">                      </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;us-east-1&quot;</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">  </span><span class="na">access_key</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test&quot;</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">  </span><span class="na">secret_key</span><span class="w">                  </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test&quot;</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">  </span><span class="na">s3_force_path_style</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">  </span><span class="na">skip_credentials_validation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="w">  </span><span class="na">skip_metadata_api_check</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18" href="#__codelineno-19-18"></a><span class="w">  </span><span class="na">skip_requesting_account_id</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="no">true</span>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19" href="#__codelineno-19-19"></a><span class="w">  </span><span class="nb">endpoints</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20" href="#__codelineno-19-20"></a><span class="w">    </span><span class="na">s3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://localhost:4566&quot;</span>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21" href="#__codelineno-19-21"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22" href="#__codelineno-19-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-3-maintf">Step 3: main.tf</h3>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_s3_bucket&quot;</span><span class="w"> </span><span class="nv">&quot;demo&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;terraform-localstack-demo&quot;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">}</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_s3_object&quot;</span><span class="w"> </span><span class="nv">&quot;file_upload&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">  </span><span class="na">bucket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_s3_bucket.demo.id</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span><span class="na">key</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello.txt&quot;</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="na">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;hello.txt&quot;</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">  </span><span class="na">etag</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nf">filemd5</span><span class="p">(</span><span class="s2">&quot;hello.txt&quot;</span><span class="p">)</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-4-outputstf">Step 4: outputs.tf</h3>
+<div class="language-hcl highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kr">output</span><span class="w"> </span><span class="nv">&quot;bucket_name&quot;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_s3_bucket.demo.bucket</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h3 id="step-5-deploy">Step 5: Deploy</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>terraform<span class="w"> </span>init
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>terraform<span class="w"> </span>plan
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>terraform<span class="w"> </span>apply<span class="w"> </span>-auto-approve
+</span></code></pre></div>
+<p>Verify:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>awslocal<span class="w"> </span>s3<span class="w"> </span>ls
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>awslocal<span class="w"> </span>s3<span class="w"> </span>ls<span class="w"> </span>s3://terraform-localstack-demo/
+</span></code></pre></div>
+<hr />
+<h2 id="cleanup-and-destroy">Cleanup and Destroy</h2>
+<h3 id="destroy-resources">Destroy Resources</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>terraform<span class="w"> </span>destroy<span class="w"> </span>-auto-approve
+</span></code></pre></div>
+<p>Output:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>Destroy complete! Resources: 2 destroyed.
+</span></code></pre></div>
+<hr />
+<h3 id="optional-preview-destroy">Optional: Preview Destroy</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>terraform<span class="w"> </span>plan<span class="w"> </span>-destroy
+</span></code></pre></div>
+<hr />
+<h3 id="verify-deletion">Verify Deletion</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>awslocal<span class="w"> </span>s3<span class="w"> </span>ls
+</span></code></pre></div>
+<hr />
+<h3 id="reset-localstack-optional">Reset LocalStack (Optional)</h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>localstack<span class="w"> </span>stop
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>localstack
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>docker<span class="w"> </span>volume<span class="w"> </span>prune<span class="w"> </span>-f
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>localstack<span class="w"> </span>start
 </span></code></pre></div>
 
 
