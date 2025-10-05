@@ -179,6 +179,7 @@ Runs on `http://localhost:4566`.
 
 ### 4. Web Dashboard
 
+Terminal
 ![alt text](<Screenshot 2025-10-05 at 8.22.20 PM.png>)
 ![alt text](<Screenshot 2025-10-05 at 8.23.33 PM.png>)
 
