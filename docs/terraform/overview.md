@@ -1,11 +1,11 @@
 Terraform is an Infrastructure as Code (IaC) tool by HashiCorp that allows you to define, provision, and manage infrastructure across cloud providers using declarative configuration files.
 
-### Why Terraform
+## Why Terraform
 
 - Ideal for creating and managing infrastructure.
 - Uses **HCL (HashiCorp Configuration Language)** — a human-readable, declarative language.
 
-### Example
+## Example
 
 ```hcl
 resource "aws_instance" "example" {
@@ -14,7 +14,7 @@ resource "aws_instance" "example" {
 }
 ```
 
-### How Terraform Communicates with Cloud Providers
+## How Terraform Communicates with Cloud Providers
 
 1. **Providers (Plugins)**
    Terraform uses provider plugins to communicate with clouds.
@@ -44,7 +44,7 @@ resource "aws_instance" "example" {
    - `apply` → Create or modify resources
    - `state` → Save results locally or remotely
 
-### Example Flow
+## Example Flow
 
 ```hcl
 resource "aws_s3_bucket" "demo" {
@@ -61,7 +61,7 @@ Terraform communicates through provider plugins that use official cloud APIs to 
 
 ## AWS CLI Installation & Configuration
 
-### 1. Install AWS CLI
+## 1. Install AWS CLI
 
 **macOS**
 
@@ -82,7 +82,7 @@ Manual installers are available at:
 
 ---
 
-### 2. Configure AWS CLI
+## 2. Configure AWS CLI
 
 ```bash
 aws configure
@@ -112,7 +112,7 @@ C:\Users\<username>\.aws\
 
 ---
 
-### 3. Test Configuration
+## 3. Test Configuration
 
 ```bash
 aws s3 ls
@@ -126,7 +126,7 @@ aws --endpoint-url=http://localhost:4566 s3 ls
 
 ---
 
-### 4. Optional: Custom Profiles
+## 4. Optional: Custom Profiles
 
 ```bash
 aws configure --profile localstack
@@ -139,7 +139,7 @@ aws --profile localstack --endpoint-url=http://localhost:4566 s3 ls
 
 LocalStack emulates AWS services locally using Docker — perfect for testing Terraform and AWS CLI without real AWS credentials.
 
-### Why Use LocalStack
+## Why Use LocalStack
 
 - Avoid AWS costs
 - Work offline
@@ -148,7 +148,7 @@ LocalStack emulates AWS services locally using Docker — perfect for testing Te
 
 ---
 
-### 1. Prerequisites
+## 1. Prerequisites
 
 | Tool           | Purpose                | macOS Install Command            |
 | -------------- | ---------------------- | -------------------------------- |
@@ -158,7 +158,7 @@ LocalStack emulates AWS services locally using Docker — perfect for testing Te
 
 ---
 
-### 2. Install LocalStack
+## 2. Install LocalStack
 
 ```bash
 pip install localstack awscli-local
@@ -167,7 +167,7 @@ localstack --version
 
 ---
 
-### 3. Start LocalStack
+## 3. Start LocalStack
 
 ```bash
 localstack start
@@ -177,7 +177,7 @@ Runs on `http://localhost:4566`.
 
 ---
 
-### 4. Web Dashboard
+## 4. Web Dashboard
 
 Terminal
 ![alt text](<Screenshot 2025-10-05 at 8.22.20 PM.png>)
@@ -185,7 +185,7 @@ Terminal
 
 ---
 
-### 5. Test
+## 5. Test
 
 ```bash
 awslocal s3 ls
@@ -194,7 +194,7 @@ awslocal s3 mb s3://demo-bucket
 
 ---
 
-### 6. Docker Compose Example
+## 6. Docker Compose Example
 
 ```yaml
 version: "3.8"
@@ -220,7 +220,7 @@ docker-compose up
 
 ## Terraform + LocalStack Integration
 
-### Project Structure
+## Project Structure
 
 ```
 terraform-localstack-demo/
@@ -230,7 +230,7 @@ terraform-localstack-demo/
 └── hello.txt
 ```
 
-### Step 1: Create a Test File
+## Step 1: Create a Test File
 
 ```bash
 echo "Hello from Terraform + LocalStack!" > hello.txt
@@ -238,7 +238,7 @@ echo "Hello from Terraform + LocalStack!" > hello.txt
 
 ---
 
-### Step 2: provider.tf
+## Step 2: provider.tf
 
 ```hcl
 terraform {
@@ -267,7 +267,7 @@ provider "aws" {
 
 ---
 
-### Step 3: main.tf
+## Step 3: main.tf
 
 ```hcl
 resource "aws_s3_bucket" "demo" {
@@ -284,7 +284,7 @@ resource "aws_s3_object" "file_upload" {
 
 ---
 
-### Step 4: outputs.tf
+## Step 4: outputs.tf
 
 ```hcl
 output "bucket_name" {
@@ -294,7 +294,7 @@ output "bucket_name" {
 
 ---
 
-### Step 5: Deploy
+## Step 5: Deploy
 
 ```bash
 terraform init
@@ -313,7 +313,7 @@ awslocal s3 ls s3://terraform-localstack-demo/
 
 ## Cleanup and Destroy
 
-### Destroy Resources
+## Destroy Resources
 
 ```bash
 terraform destroy -auto-approve
@@ -327,7 +327,7 @@ Destroy complete! Resources: 2 destroyed.
 
 ---
 
-### Optional: Preview Destroy
+## Optional: Preview Destroy
 
 ```bash
 terraform plan -destroy
@@ -335,7 +335,7 @@ terraform plan -destroy
 
 ---
 
-### Verify Deletion
+## Verify Deletion
 
 ```bash
 awslocal s3 ls
@@ -343,7 +343,7 @@ awslocal s3 ls
 
 ---
 
-### Reset LocalStack (Optional)
+## Reset LocalStack (Optional)
 
 ```bash
 localstack stop
