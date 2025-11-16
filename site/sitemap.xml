@@ -1,3 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/ansible/ansible/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/blog/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/docker/docker/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/jenkins/jenkins/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/kubernetes/kubernetes/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/monitoring-tools/log/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/shell-scripts/scripts/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/sonarqube/sonarqube/</loc>
+      </url>
+      <url>
+        <loc>https://sameeralam3127.github.io/Devops-automation/terraform/overview/</loc>
+      </url>
 </urlset>
