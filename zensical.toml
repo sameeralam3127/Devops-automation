@@ -11,7 +11,7 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "DevOps Automation"
+site_name = "Compute Central"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
@@ -27,7 +27,7 @@ site_author = "Sameer Alam"
 # The site_url is the canonical URL for your site. When building online
 # documentation you should set this.
 # Read more: https://zensical.org/docs/setup/basics/#site_url
-site_url = "https://sameeralam3127.github.io/Devops-automation/"
+site_url = "https://computecentral.in/"
 
 # The copyright notice appears in the page footer and can contain an HTML
 # fragment.
