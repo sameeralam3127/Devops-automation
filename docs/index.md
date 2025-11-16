@@ -1,6 +1,6 @@
-# [DevOps Automation]()
+# [Compute Central]()
 
-Welcome to **DevOps Automation** – your resource for everything **DevOps** and **Site Reliability Engineering (SRE)**. Whether you are experienced or just starting, this site will help you explore tools, practical tips, and connect with a professional community.
+Welcome to **Compute Central** – your resource for everything **DevOps** and **Site Reliability Engineering (SRE)**. Whether you are experienced or just starting, this site will help you explore tools, practical tips, and connect with a professional community.
 
 !!! tip "Practical advice to help you deliver and manage code effectively."
 
